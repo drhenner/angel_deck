@@ -59,6 +59,9 @@ class User < ActiveRecord::Base
                   :address_attributes,
                   :phone_attributes
 
+  has_many :employees# is an employee at many places
+  has_many :companies, :through => :employees
+
   belongs_to :account
 
   has_one     :store_credit

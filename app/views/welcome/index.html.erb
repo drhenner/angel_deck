@@ -2,12 +2,44 @@
   <%= stylesheet_link_tag 'home_page.css' %>
 <% end %>
 
-
-<div id='left_side_panel' class='span-6 last'>
-&nbsp;
+<div id='featured-title' class='span-24'>
+  <h1>
+    Bringing your startup to investors.
+  </h1>
+  <h4>
+    Create your Deck. Refine your Pitch. Start a Business Plan
+  </h4>
 </div>
+<div id='featured-list' class='span-24'>
+  <div id='featured_item' class='span-18'>
+    <p>Are you looking to create a Startup?</p>
+    <p>Well you need to start creating a deck.  A deck is a business plan that you present to investors.</p>
+    <p>Here at <%= site_name %> we help you through the process.
+      <ul>
+        <li><%= site_name %> gives you an easy place to store your </li>
+        <li><%= site_name %> allows you to share your deck to investors easily or you can keep your deck private until you are out of stealth mode.  Once you are out of stealth mode, open your deck to the world and allow investors to see your company.</li>
+        <li><%= site_name %> allows investors to follow your progress easily.</li>
+        <li><%= site_name %> allows investors to give you the valuable feedback you are looking for, saving you and the investor time.</li>
+        <li><%= site_name %> is free to start and if you upgrade to a paid account it is a tax deductible business expense.</li>
+        <li></li>
+      </ul>
+    </p>
+  </div>
 
-<div id='featured_item' class='span-18 last'>
-  <%= image_tag 'home.png' %>
+  <div id='right_side_panel' class='span-6 last'>
+    <%#= image_tag 'home.png' %>
+  </div>
 </div>
+<div id='featured-links' class='span-24'>
+  <%= link_to( root_path, :class => 'span-6 highlighted-box' ) do %>
+    <h4>Get an Account.</h4>
+  <% end %>
 
+  <%= link_to( root_path, :class => 'span-6 highlighted-box' ) do %>
+    <h4>Create your Deck.</h4>
+  <% end %>
+
+  <%= link_to( root_path, :class => 'span-6 highlighted-box' ) do %>
+    <h4>Refine your Pitch.</h4>
+  <% end %>
+</div>

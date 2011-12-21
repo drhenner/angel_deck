@@ -5,6 +5,7 @@ nbproject
 .rvmrc
 .vim
 .sass-cache/
+*.tmproj
 /.bundle
 .yardoc/*
 
