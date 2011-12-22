@@ -1,0 +1,652 @@
+---
+alabama:
+  - Birmingham
+  - Decatur
+  - Dothan
+  - Hoover
+  - Huntsville
+  - Mobile
+  - Montgomery
+  - Tuscaloosa
+alaska:
+  - Anchorage
+arizona:
+  - Flagstaff
+  - Gilbert
+  - Glendale
+  - Mesa
+  - Peoria
+  - Phoenix
+  - Scottsdale
+  - Tempe
+  - Tucson
+  - Yuma
+arkansas:
+  - Fayetteville
+  - Fort Smith
+  - Jonesboro
+  - Little Rock
+  - North Little Rock
+  - Pine Bluff
+california:
+  - Alameda
+  - Alhambra
+  - Anaheim
+  - Antioch
+  - Apple Valley
+  - Arcadia
+  - Bakersfield
+  - Baldwin Park
+  - Bellflower
+  - Berkeley
+  - Buena Park
+  - Burbank
+  - Camarillo
+  - Carlsbad
+  - Carson
+  - Cerritos
+  - Chico
+  - Chino
+  - Chino Hills
+  - Chula Vista
+  - Citrus Heights
+  - Clovis
+  - Compton
+  - Concord
+  - Corona
+  - Costa Mesa
+  - Cupertino
+  - Daly City
+  - Davis
+  - Diamond Bar
+  - Downey
+  - El Cajon
+  - El Monte
+  - Encinitas
+  - Escondido
+  - Fairfield
+  - Folsom
+  - Fontana
+  - Fountain Valley
+  - Fremont
+  - Fresno
+  - Fullerton
+  - Garden Grove
+  - Gardena
+  - Glendale
+  - Hawthorne
+  - Hayward
+  - Hemet
+  - Hesperia
+  - Huntington Beach
+  - Huntington Park
+  - Inglewood
+  - Irvine
+  - La Habra
+  - La Mesa
+  - Laguna Niguel
+  - Lake Forest
+  - Lakewood
+  - Lancaster
+  - Livermore
+  - Lodi
+  - Long Beach
+  - Los Angeles
+  - Lynwood
+  - Merced
+  - Milpitas
+  - Mission Viejo
+  - Modesto
+  - Montebello
+  - Monterey Park
+  - Moreno Valley
+  - Mountain View
+  - Napa
+  - National City
+  - Newport Beach
+  - Norwalk
+  - Oakland
+  - Oceanside
+  - Ontario
+  - Orange
+  - Oxnard
+  - Palmdale
+  - Palo Alto
+  - Paramount
+  - Pasadena
+  - Petaluma
+  - Pico Rivera
+  - Pittsburg
+  - Pleasanton
+  - Pomona
+  - Rancho Cucamonga
+  - Redding
+  - Redlands
+  - Redondo Beach
+  - Redwood City
+  - Rialto
+  - Richmond
+  - Riverside
+  - Rosemead
+  - Roseville
+  - Sacramento
+  - Salinas
+  - San Bernardino
+  - San Buenaventura
+  - San Diego
+  - San Francisco
+  - San Jose
+  - San Leandro
+  - San Marcos
+  - San Mateo
+  - San Rafael
+  - Santa Ana
+  - Santa Barbara
+  - Santa Clara
+  - Santa Clarita
+  - Santa Cruz
+  - Santa Maria
+  - Santa Monica
+  - Santa Rosa
+  - Santee
+  - Simi Valley
+  - South Gate
+  - South San Francisco
+  - Stockton
+  - Sunnyvale
+  - Temecula
+  - Thousand Oaks
+  - Torrance
+  - Tracy
+  - Turlock
+  - Tustin
+  - Union City
+  - Upland
+  - Vacaville
+  - Vallejo
+  - Victorville
+  - Visalia
+  - Vista
+  - Walnut Creek
+  - West Covina
+  - Westminster
+  - Whittier
+  - Yorba Linda
+colorado:
+  - Arvada
+  - Aurora
+  - Boulder
+  - Colorado Springs
+  - Denver
+  - Fort Collins
+  - Greeley
+  - Lakewood
+  - Longmont
+  - Loveland
+  - Pueblo
+  - Thornton
+  - Westminster
+connecticut:
+  - Bridgeport
+  - Bristol
+  - Danbury
+  - Hartford
+  - Meriden
+  - Milford
+  - New Britain
+  - New Haven
+  - Norwalk
+  - Stamford
+  - Waterbury
+  - West Haven
+district_of_columbia:
+  - Washington DC
+delaware:
+  - wilmington
+florida:
+  - Boca Raton
+  - Boynton Beach
+  - Cape Coral
+  - Clearwater
+  - Coral Springs
+  - Davie
+  - Daytona Beach
+  - Deerfield Beach
+  - Delray Beach
+  - Deltona
+  - Fort Lauderdale
+  - Gainesville
+  - Hialeah
+  - Hollywood
+  - Jacksonville
+  - Lakeland
+  - Largo
+  - Lauderhill
+  - Margate
+  - Melbourne
+  - Miami Beach
+  - Miami
+  - Miramar
+  - North Miami
+  - Orlando
+  - Palm Bay
+  - Pembroke Pines
+  - Pensacola
+  - Plantation
+  - Pompano Beach
+  - Port St. Lucie
+  - Sarasota
+  - St. Petersburg
+  - Sunrise
+  - Tallahassee
+  - Tamarac
+  - Tampa
+  - West Palm Beach
+georgia:
+  - Albany
+  - Athens
+  - Atlanta
+  - Augusta
+  - Columbus
+  - Macon
+  - Marietta
+  - Roswell
+  - Savannah
+idaho:
+  - Boise City
+  - Idaho Falls
+  - Nampa
+  - Pocatello
+illinois:
+  - Arlington Heights
+  - Aurora
+  - Berwyn
+  - Bloomington
+  - Bolingbrook
+  - Champaign
+  - Chicago
+  - Cicero
+  - Decatur
+  - Des Plaines
+  - Elgin
+  - Evanston
+  - Joliet
+  - Mount Prospect
+  - Naperville
+  - Oak Lawn
+  - Oak Park
+  - Orland Park
+  - Palatine
+  - Peoria
+  - Rockford
+  - Schaumburg
+  - Skokie village
+  - Springfield
+  - Waukegan
+  - Wheaton
+indiana:
+  - Anderson
+  - Bloomington
+  - Elkhart
+  - Evansville
+  - Fort Wayne
+  - Gary
+  - Hammond
+  - Indianapolis
+  - Lafayette
+  - Muncie
+  - South Bend
+  - Terre Haute
+iowa:
+  - Ames
+  - Cedar Rapids
+  - Council Bluffs
+  - Davenport
+  - Des Moines
+  - Dubuque
+  - Iowa City
+  - Sioux City
+  - Waterloo
+kansas:
+  - Kansas City
+  - Lawrence
+  - Olathe
+  - Overland Park
+  - Topeka
+  - Wichita
+kentucky:
+  - Lexington-Fayette
+  - Louisville
+  - Owensboro
+louisiana:
+  - Baton Rouge
+  - Bossier City
+  - Kenner
+  - Lafayette
+  - Lake Charles
+  - Monroe
+  - New Orleans
+  - Shreveport
+maine:
+  - portland
+maryland:
+  - Baltimore
+  - Bowie
+  - Frederick
+  - Gaithersburg
+massachusetts:
+  - Boston
+  - Brockton
+  - Cambridge
+  - Chicopee
+  - Fall River
+  - Haverhill
+  - Lawrence
+  - Lowell
+  - Lynn
+  - Malden
+  - Medford
+  - New Bedford
+  - Newton
+  - Quincy
+  - Somerville
+  - Springfield
+  - Taunton
+  - Waltham
+  - Worcester
+michigan:
+  - Ann Arbor
+  - Battle Creek
+  - Dearborn
+  - Dearborn Heights
+  - Detroit
+  - Farmington Hills
+  - Flint
+  - Grand Rapids
+  - Kalamazoo
+  - Lansing
+  - Livonia
+  - Pontiac
+  - Rochester Hills
+  - Royal Oak
+  - Saginaw
+  - Southfield
+  - St. Clair Shores
+  - Sterling Heights
+  - Taylor
+  - Troy
+  - Warren
+  - Westland
+  - Wyoming
+minnesota:
+  - Bloomington
+  - Brooklyn Park
+  - Burnsville
+  - Coon Rapids
+  - Duluth
+  - Eagan
+  - Eden Prairie
+  - Maple Grove
+  - Minneapolis
+  - Minnetonka
+  - Plymouth
+  - Rochester
+  - St. Cloud
+  - St. Paul
+mississippi:
+  - Biloxi
+  - Gulfport
+  - Jackson
+missouri:
+  - Columbia
+  - Florissant
+  - Independence
+  - Kansas City
+  - Lee's Summit
+  - Springfield
+  - St. Charles
+  - St. Joseph
+  - St. Louis
+  - St. Peters
+montana:
+  - Billings
+  - Bozeman
+  - Great Falls
+  - Helena
+  - Missoula
+nebraska:
+  - Lincoln
+  - Omaha
+nevada:
+  - Carson City
+  - Henderson
+  - Las Vegas
+  - North Las Vegas
+  - Reno
+  - Sparks
+new_hampshire:
+  - Manchester
+  - Nashua
+new_jersey:
+  - Bayonne
+  - Camden
+  - Clifton
+  - East Orange
+  - Elizabeth
+  - Jersey City
+  - Newark
+  - Passaic
+  - Paterson
+  - Trenton
+  - Union City
+  - Vineland
+new_mexico:
+  - Albuquerque
+  - Las Cruces
+  - Rio Rancho
+  - Santa Fe
+new_york:
+  - Albany
+  - Buffalo
+  - Hempstead
+  - Mount Vernon
+  - New Rochelle
+  - New York
+  - Niagara Falls
+  - Rochester
+  - Schenectady
+  - Syracuse
+  - Utica
+  - White Plains
+  - Yonkers
+north_carolina:
+  - Asheville
+  - Cary
+  - Charlotte
+  - Concord
+  - Durham
+  - Fayetteville
+  - Gastonia
+  - Greensboro
+  - Greenville
+  - High Point
+  - Jacksonville
+  - Raleigh
+  - Rocky Mount
+  - Wilmington
+  - Winston-Salem
+north_dakota:
+  - Bismarck
+  - Fargo
+ohio:
+  - Akron
+  - Canton
+  - Cincinnati
+  - Cleveland
+  - Columbus
+  - Dayton
+  - Elyria
+  - Euclid
+  - Hamilton
+  - Kettering
+  - Lakewood
+  - Lorain
+  - Mentor
+  - Middletown
+  - Parma
+  - Springfield
+  - Toledo
+  - Youngstown
+oklahoma:
+  - Broken Arrow
+  - Edmond
+  - Lawton
+  - Midwest City
+  - Norman
+  - Oklahoma City
+  - Tulsa
+oregon:
+  - Beaverton
+  - Bend
+  - Eugene
+  - Gresham
+  - Hillsboro
+  - Medford
+  - Portland
+  - Salem
+  - Springfield
+pennsylvania:
+  - Allentown
+  - Bethlehem
+  - Erie
+  - Lancaster
+  - Philadelphia
+  - Pittsburgh
+  - Reading
+  - Scranton
+rhode_island:
+  - Cranston
+  - Pawtucket
+  - Providence
+  - Warwick
+south_carolina:
+  - Charleston
+  - Columbia
+  - Greenville
+  - North Charleston
+south_dakota:
+  - Rapid City
+  - Sioux Falls
+tennessee:
+  - Chattanooga
+  - Clarksville
+  - Jackson
+  - Johnson City
+  - Knoxville
+  - Memphis
+  - Murfreesboro
+  - Nashville-Davidson
+texas:
+  - Abilene
+  - Amarillo
+  - Arlington
+  - Austin
+  - Baytown
+  - Beaumont
+  - Brownsville
+  - Bryan
+  - Carrollton
+  - College Station
+  - Corpus Christi
+  - Dallas
+  - Denton
+  - El Paso
+  - Flower Mound
+  - Fort Worth
+  - Galveston
+  - Garland
+  - Grand Prairie
+  - Harlingen
+  - Houston
+  - Irving
+  - Killeen
+  - Laredo
+  - Lewisville
+  - Longview
+  - Lubbock
+  - McAllen
+  - McKinney
+  - Mesquite
+  - Midland
+  - Missouri City
+  - North Richland Hills
+  - Odessa
+  - Pasadena
+  - Plano
+  - Port Arthur
+  - Richardson
+  - Round Rock
+  - San Angelo
+  - San Antonio
+  - Sugar Land
+  - Temple
+  - Tyler
+  - Victoria
+  - Waco
+  - Wichita Falls
+utah:
+  - Layton
+  - Ogden
+  - Orem
+  - Provo
+  - Salt Lake City
+  - Sandy
+  - Taylorsville
+  - West Jordan
+  - West Valley City
+virginia:
+  - Alexandria
+  - Chesapeake
+  - Hampton
+  - Lynchburg
+  - Newport News
+  - Norfolk
+  - Portsmouth
+  - Richmond
+  - Roanoke
+  - Suffolk
+  - Virginia Beach
+washington:
+  - Bellevue
+  - Bellingham
+  - Everett
+  - Federal Way
+  - Kennewick
+  - Kent
+  - Lakewood
+  - Renton
+  - Seattle
+  - Shoreline
+  - Spokane
+  - Tacoma
+  - Vancouver
+  - Yakima
+west_virginia:
+  - Charleston
+  - Huntington
+wisconsin:
+  - Appleton
+  - Eau Claire
+  - Green Bay
+  - Janesville
+  - Kenosha
+  - La Crosse
+  - Madison
+  - Milwaukee
+  - Oshkosh
+  - Racine
+  - Sheboygan
+  - Waukesha
+  - West Allis
+wyoming:
+  - Cheyenne
