@@ -4,42 +4,44 @@
 
 <div id='featured-title' class='span-24'>
   <h1>
-    Bringing your startup to investors.
+    Bringing your Startup to Investors.
   </h1>
-  <h4>
-    Create your Deck. Refine your Pitch. Start a Business Plan
-  </h4>
 </div>
-<div id='featured-list' class='span-24'>
-  <div id='featured_item' class='span-18'>
-    <p>Are you looking to create a Startup?</p>
-    <p>Well you need to start creating a deck.  A deck is a business plan that you present to investors.</p>
-    <p>Here at <%= site_name %> we help you through the process.
-      <ul>
-        <li><%= site_name %> gives you an easy place to store your </li>
+
+<div id='featured-links' class='span-23 prepend-1'>
+  <%= link_to( root_path, :class => 'span-7 column highlighted-box', :style => 'margin-right:25px;' ) do %>
+    <%= image_tag 'angel-meets-investor.jpg', :width => '180px', :height => '180px' %>
+    <h3>Create your Deck.</h3>
+  <% end %>
+
+  <%= link_to( root_path, :class => 'span-7 column highlighted-box', :style => 'margin-right:25px;color:#722;' ) do %>
+    <%= image_tag 'angel-help.jpg', :width => '180px', :height => '180px' %>
+    <h3>Refine your Pitch.</h3>
+  <% end %>
+
+  <%= link_to( root_path, :class => 'span-7 column highlighted-box last' ) do %>
+    <%= image_tag 'angel-savior.jpeg', :width => '180px', :height => '180px' %>
+    <h3>Start a Business Plan.</h3>
+  <% end %>
+  <div class='clear'></div>
+</div>
+
+<div id='app-features' class='span-24'>
+  <h2>We are here to help you get your startup in front of Investors.</h2>
+  <div id='featured_item' class='span-24 last'>
+
+
+    <div id='featured-list-wrapper'>
+
+
+      <ul id='featured-list' class='pretty-list'>
+        <li><%= site_name %> gives you an easy place to store your investor Deck.</li>
         <li><%= site_name %> allows you to share your deck to investors easily or you can keep your deck private until you are out of stealth mode.  Once you are out of stealth mode, open your deck to the world and allow investors to see your company.</li>
         <li><%= site_name %> allows investors to follow your progress easily.</li>
         <li><%= site_name %> allows investors to give you the valuable feedback you are looking for, saving you and the investor time.</li>
         <li><%= site_name %> is free to start and if you upgrade to a paid account it is a tax deductible business expense.</li>
-        <li></li>
       </ul>
-    </p>
+    </div>
   </div>
 
-  <div id='right_side_panel' class='span-6 last'>
-    <%#= image_tag 'home.png' %>
-  </div>
-</div>
-<div id='featured-links' class='span-24'>
-  <%= link_to( root_path, :class => 'span-6 highlighted-box' ) do %>
-    <h4>Get an Account.</h4>
-  <% end %>
-
-  <%= link_to( root_path, :class => 'span-6 highlighted-box' ) do %>
-    <h4>Create your Deck.</h4>
-  <% end %>
-
-  <%= link_to( root_path, :class => 'span-6 highlighted-box' ) do %>
-    <h4>Refine your Pitch.</h4>
-  <% end %>
 </div>

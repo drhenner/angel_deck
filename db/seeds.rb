@@ -22,11 +22,19 @@ states_list   = YAML::load( File.open( file_to_load ) )
 states_list.each_pair do |key,state|
   s = State.find_by_abbreviation_and_country_id(state['attributes']['abbreviation'], state['attributes']['country_id'])
   State.create(state['attributes']) unless s
-end 
+end
 
-roles = Role::ROLES 
+roles = Role::ROLES
 roles.each do |role|
   Role.find_or_create_by_name(role)
+end
+
+privileges = Privilege::PRIVILEGES
+privileges.each do |privilege|
+  p = Privilege.find_by_name(privilege.keys.first)
+  unless p
+    Privilege.create(:name => privilege.keys.first, :description => privilege.values.first)
+  end
 end
 
 AddressType::NAMES.each do |address_type|

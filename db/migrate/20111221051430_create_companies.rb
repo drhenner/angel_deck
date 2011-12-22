@@ -9,5 +9,8 @@ class CreateCompanies < ActiveRecord::Migration
 
       t.timestamps
     end
+
+    add_index :companies, :name
+    add_index :companies, :city_id
   end
 end

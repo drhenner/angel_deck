@@ -37,23 +37,9 @@
       <div id="header_wrapper" class='bp'>
         <div class="container logged-in" id="header">
           <h1 id="logo">
-            <%= link_to image_tag( "logos/#{Image::MAIN_LOGO}.png", :alt => 'hadean image.'), root_path %>
+            <%= link_to site_name, root_path %>
           </h1>
           <ul id="menu-main">
-            <li id="menu-main-discover">
-              <a href="/"> <strong> About </strong> <span>How it Works</span> </a>
-            </li>
-
-            <li class="" id="menu-main-cart">
-                <%= link_to(shopping_cart_items_path, :id => 'cart_items_buttons') do %>
-                    <strong> Cart </strong> <span>view your stuff.</span>
-                <% end %>
-            </li>
-            <li class="" id="menu-main-wish">
-                <%= link_to(wish_items_path, :id => 'wish_items_button') do %>
-                    <strong> Wish List </strong> <span>what you want.</span>
-                <% end %>
-            </li>
 
             <li class="" id="menu-main-user">
               <div>
@@ -69,7 +55,6 @@
 
           </ul>
 
-          <%= render '/layouts/product_search' %>
         </div>
       </div>
       <div id="sub_header_wrapper" class='bp'>
@@ -83,11 +68,9 @@
     <div id='content_wrapper' class='container'>
       <%= yield %>
     </div>
-  </div>
-  <div id="footer_buffer" class='bp'>
-    &nbsp;
-  </div>
+
 </div>
+<div class='clearfix'></div>
   <%= render 'shared/main_footer' %>
   <%= yield :bottom %>
 

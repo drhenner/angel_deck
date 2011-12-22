@@ -2,8 +2,8 @@
 
 #sub_header_wrapper {
 
-  border-bottom: 1px solid #E6E6E6;
-  background: url("../../images/header/bg-header-wrap.png") repeat-x scroll center bottom #FFFFFF;
+  // border-bottom: 1px solid #E6E6E6;
+  // background: url("../../images/header/bg-header-wrap.png") repeat-x scroll center bottom #FFFFFF;
   text-align: left;
   color: #B2B2B2;
 
@@ -52,9 +52,9 @@
       }
     }
     #menu-main {
-      font-size: 0;
+
       list-style-type:none;
-      float: left;
+      float: right;
       margin: 0;
       overflow: hidden;
 

@@ -2,8 +2,8 @@
 
 #header_wrapper {
 
-  border-bottom: 1px solid #CCCCCC;
-  background: url("../../images/header/bg-header-wrap.png") repeat-x scroll center bottom #FFFFFF;
+  // border-bottom: 1px solid #CCCCCC;
+  // background: url("../../images/header/bg-header-wrap.png") repeat-x scroll center bottom #FFFFFF;
 
   #header {
     font-family: "Helvetica Neue",Helvetica,Arial,"Liberation Sans",FreeSans,sans-serif;
@@ -26,11 +26,11 @@
     #logo {
       display: inline;
       float: left;
-      font-size: 24px;
+      font-size: 48px;
       margin-bottom: 0;
       margin-top: 5px;
       margin-left: 0px;
-      border-right: 1px solid #CCCCCC;
+      // border-right: 1px solid #CCCCCC;
       width: 224px;
       height: 100%;
 
@@ -50,9 +50,8 @@
       }
     }
     #menu-main {
-      font-size: 0;
       list-style-type:none;
-      float: left;
+      float: right;
       margin: 0;
       overflow: hidden;
 
@@ -61,7 +60,7 @@
         div {
           display: inline-block;
           padding: 13px 9px;
-          border-right: 1px solid #CCCCCC;
+          // border-right: 1px solid #CCCCCC;
           strong {
             color: #AA5555 !important;
             display: block;
@@ -176,9 +175,9 @@
 }
 
 a {
-  color: #AA5555;
+  color: #6677CC;
   text-decoration: none;
 }
 a:visited {
-  color: #994444;
+  color: #6679CF;
 }

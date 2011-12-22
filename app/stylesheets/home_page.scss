@@ -1,4 +1,5 @@
-
+@import "compass";
+@import "app_mixins";
 ol#interesting_items-list {
   text-align: left;
   padding-left: 0px;
@@ -19,7 +20,6 @@ ol#interesting_items-list {
 }
 
 div {
-  color: #3F3D42;
   #featured_description {
     font-family: Helvetica Neue, Arial, Helvetica, sans-serif;
     line-height: 1.3;
@@ -29,4 +29,64 @@ div {
 }
 #featured_image {
   padding-bottom:7px;
+}
+
+// HEADER DIVs includes search , cart button, wish button
+h1 {
+  font-family: minion-pro-1, minion-pro-2, 'Times New Roman', Georgia, serif;
+  font-size:60px;
+}
+h2 {
+  color:#333;
+  font-family: minion-pro-1, minion-pro-2, 'Times New Roman', Georgia, serif;
+  font-size:41px;
+}
+h3 {
+  color:#333;
+  font-family: minion-pro-1, minion-pro-2, 'Times New Roman', Georgia, serif;
+  font-size:28px;
+}
+
+#featured-links {
+  margin-bottom:20px;
+  text-align:center;
+}
+
+.highlighted-box {
+  background: #FFF;
+  border:solid 3px #EEEEEE;
+  font-size:130%;
+  @include rounded(4px);
+}
+.highlighted-box:hover {
+  background: #FFF;
+  border:solid 3px #AACCFF;
+}
+div#app-features {
+  text-align: left;
+  color: #333;
+  font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-weight:bold;
+  font-size:20px;
+  padding-bottom:20px;
+
+
+  #featured-list-wrapper {
+    // border: 4px solid #CCC;
+    padding: 10px 25px;
+    background: #F0F6FF;
+    @include rounded(6px);
+    font-size:120%;
+  }
+
+  ul {
+
+  }
+  li {
+    margin-bottom: 1em;
+    color: #666666;
+    list-style:circle;
+    font-size:90%;
+    font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  }
 }
