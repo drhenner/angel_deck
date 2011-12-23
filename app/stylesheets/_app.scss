@@ -5,7 +5,7 @@ html,body { height:100%; }
 body #body_wrapper {
   min-height: 100%;
   height: auto !important;
-  height: 100%;
+  // height: 100%;
   margin: 0 auto -3em;
 }
 
@@ -153,8 +153,16 @@ textarea.height-50 {
 
 li {
   list-style: none;
+  text-align:left;
 }
 
+li.field {
+
+  label {
+    display: inline-block;
+    width:125px;
+  }
+}
 .width-list {
   li {
     clear:both;
@@ -243,4 +251,9 @@ input.text, input.title, input[type="text"], input[type="password"], input[type=
 
 button.ui-button {
   text-shadow: 0 0 0 #000;
+}
+
+h1 {
+  font-family: minion-pro-1, minion-pro-2, 'Times New Roman', Georgia, serif;
+  font-size:60px;
 }

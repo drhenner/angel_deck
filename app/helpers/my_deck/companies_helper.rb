@@ -1,0 +1,2 @@
+module MyDeck::CompaniesHelper
+end

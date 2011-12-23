@@ -12,6 +12,7 @@ gem 'compass', "~> 0.11.5"
 #  gem 'dalli', '~> 1.0.2'
 
 gem "friendly_id", "~> 3.3"
+gem 'geokit'
 gem 'haml',  ">= 3.0.13"#, ">= 3.0.4"#, "2.2.21"#,
 gem "jquery-rails"
 

@@ -5,4 +5,9 @@ class City < ActiveRecord::Base
   validates :name, :presence => true
   validates :longitude, :presence => true
   validates :latitude, :presence => true
+
+
+  def name_state_abbreviation
+    [name, state.abbreviation].join(' - ')
+  end
 end

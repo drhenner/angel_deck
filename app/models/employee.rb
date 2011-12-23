@@ -1,7 +1,7 @@
 class Employee < ActiveRecord::Base
 
-  belongs_to :user_id
-  belongs_to :company_id
+  belongs_to :user
+  belongs_to :company
 
   has_many :employee_privileges
   has_many :privileges, :through => :employee_privileges

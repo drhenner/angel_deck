@@ -1,0 +1,15 @@
+<h1> Companies </h1>
+
+<div class='span-24'>
+<% @companies.each do |company| %>
+  <div class='span-12 <%= cycle '', 'last' %> '>
+    <%= link_to "", edit_my_deck_company_path(company), :class => 'ss_sprite ss_application_edit' %>
+    <ul>
+      <li><label>Name:</label> <%= link_to company.name, my_deck_company_path(company) %></li>
+      <li><label>Closest City:</label> <%= company.city.name %></li>
+      <li><label>About:</label> <%= company.brief_description %></li>
+    </ul>
+  </div>
+<% end %>
+
+<p><%= link_to "New Company", new_my_deck_company_path, :class => 'button' %></p>

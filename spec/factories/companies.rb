@@ -4,8 +4,6 @@ FactoryGirl.define do
   factory :company do
       name "MyString"
       brief_description "MyText"
-      description "MyText"
-      description_markup "MyText"
-      city_id 1
+      city { |c| c.association(:city) }
     end
 end

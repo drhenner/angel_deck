@@ -16,6 +16,10 @@ Hadean::Application.routes.draw do # |map|
 
   root :to => "welcome#index"
 
+  namespace :my_deck do
+    resources :companies
+  end
+
   namespace :customer do
     resources :registrations,   :only => [:new, :create]
     resource  :password_reset,  :only => [:new, :create, :edit, :update]

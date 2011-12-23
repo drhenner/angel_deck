@@ -30,14 +30,17 @@
 
 
     <div class=" bp">
-      <div id="header_wrapper" class='bp'>
+      <div id="dark_header_wrapper" class='bp'>
         <div class="container logged-in" id="header">
           <h1 id="logo">
             <%= link_to site_name, root_path %>
-            <%#= link_to 'RoR Ecommerce', root_path %>
           </h1>
           <ul id="menu-main">
-
+            <% if most_likely_user %>
+              <li id="menu-main-account" class='my-account'>
+                <%= link_to_unless_current 'My Account', myaccount_overview_path, :class => 'nav' %>
+              </li>
+            <% end %>
             <li class="" id="menu-main-user">
               <div>
                 <% unless most_likely_user %>
@@ -54,11 +57,13 @@
 
         </div>
       </div>
-      <div id="sub_header_wrapper" class='bp'>
-        <div id="sub_sub_header_wrapper" class='container'>
-          <%= render 'shared/main_product_tabs' %>
+      <% if nil %>
+        <div id="sub_header_wrapper" class='bp'>
+          <div id="sub_sub_header_wrapper" class='container'>
+            <%#= render 'shared/main_product_tabs' %>
+          </div>
         </div>
-      </div>
+      <% end %>
     </div>
 
 
@@ -67,8 +72,6 @@
     </div>
 
 </div>
-<div class='clearfix'></div>
-
   <%= render 'shared/main_footer' %>
 
   <%= yield :bottom %>

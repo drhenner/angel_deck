@@ -1,0 +1,20 @@
+<h1> Create your Company </h1>
+
+<%= form_for @company, :url => my_deck_companies_path(@company) do |f| %>
+  <%=  render :partial => 'form', :locals => {:f => f} %>
+  <div class="actions"> <%= f.submit 'Create' , :class => 'button' %> </div>
+<% end %>
+
+<%#= javascript_include_tag "ckeditor/ckeditor.js" %>
+
+
+<% content_for :head do -%>
+  <%= stylesheet_link_tag 'chosen.css' %>
+<% end %>
+
+<% content_for :below_body do -%>
+  <%= javascript_include_tag 'chosen/chosen.jquery.min.js' %>
+  <script>
+    jQuery(".chzn-select").chosen();
+  </script>
+<% end %>

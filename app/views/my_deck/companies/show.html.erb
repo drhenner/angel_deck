@@ -1,0 +1,10 @@
+<h1> <%= company.name %> </h1>
+
+<div class='span-12 <%= cycle '', 'last' %> '>
+  <%= link_to "", edit_my_deck_company_path(@company), :class => 'ss_sprite ss_application_edit' %>
+  <ul>
+    <li><label>Closest City:</label> <%= @company.city.name %></li>
+    <li><label>About:</label> <%= @company.brief_description %></li>
+  </ul>
+  <%= raw @company.description %>
+</div>

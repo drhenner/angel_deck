@@ -222,8 +222,8 @@ body.bp li ul, body.bp li ol {
 }
 /* line 75, ../../app/stylesheets/blueprint/_typography.scss */
 body.bp ul, body.bp ol {
-  margin: 0 1.5em 1.5em 0;
-  padding-left: 3.333em;
+  margin: 0 0.5em 0.5em 0;
+  padding-left: 0em;
 }
 /* line 76, ../../app/stylesheets/blueprint/_typography.scss */
 body.bp ul {
@@ -505,7 +505,9 @@ form.bp input.ui-pg-input {
 /* line 51, ../../app/stylesheets/blueprint/_form.scss */
 form.bp textarea {
   width: 390px;
-  height: 250px;
+  height: 90px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
 }
 
 /* line 25, ../../app/stylesheets/partials/_two_col.scss */
@@ -711,8 +713,8 @@ li ul, li ol {
 
 /* line 75, ../../app/stylesheets/blueprint/_typography.scss */
 ul, ol {
-  margin: 0 1.5em 1.5em 0;
-  padding-left: 3.333em;
+  margin: 0 0.5em 0.5em 0;
+  padding-left: 0em;
 }
 
 /* line 76, ../../app/stylesheets/blueprint/_typography.scss */
@@ -1710,5 +1712,7 @@ input.ui-pg-input {
 /* line 51, ../../app/stylesheets/blueprint/_form.scss */
 textarea {
   width: 390px;
-  height: 250px;
+  height: 90px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
 }

@@ -1,0 +1,18 @@
+
+  <%= f.error_messages %>
+<ul style='margin-left:3px;'>
+  <li class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </li>
+  <li class="field">
+    <%= f.label :city_id, 'Closest City' %>
+    <%= f.select :city_id, cities, { :include_blank => true }, :class => 'chzn-select' %>
+  </li>
+
+  <li class="field">
+    <%= f.label :brief_description, :style => 'display:block;' %>
+    <%= f.text_area :brief_description %>
+  </li>
+
+</ul>

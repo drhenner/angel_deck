@@ -1,0 +1,21 @@
+<h1> Edit Company </h1>
+
+<%= form_for @company, :url => [:my_deck, @company] do |f| %>
+  <%=  render :partial => 'form', :locals => {:f => f} %>
+  <div class="actions"><%= f.submit 'Update' , :class => 'button' %></div>
+<% end %>
+
+<p>
+  <%= link_to "Show", [:my_deck, @company], :class => 'button' %> |
+</p>
+
+<% content_for :head do -%>
+  <%= stylesheet_link_tag 'chosen.css' %>
+<% end %>
+
+<% content_for :below_body do -%>
+  <%= javascript_include_tag 'chosen/chosen.jquery.min.js' %>
+  <script>
+    jQuery(".chzn-select").chosen();
+  </script>
+<% end %>
