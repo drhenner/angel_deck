@@ -18,6 +18,14 @@ Hadean::Application.routes.draw do # |map|
 
   namespace :my_deck do
     resources :companies
+    resources :pages
+  end
+
+  namespace :company_admin do
+    resources :companies do
+      resources :options,      :only => [:index]
+      #resources :pages
+    end
   end
 
   namespace :customer do

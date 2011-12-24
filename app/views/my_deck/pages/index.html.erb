@@ -1,0 +1,26 @@
+<h1> Pages </h1>
+
+<table>
+  <tr>
+    <th>Pageable</th>
+    <th>Pageable Type</th>
+    <th>Page Type</th>
+    <th>Description</th>
+    <th>Description Markup</th>
+  </tr>
+  <% for page in @pages %>
+    <tr>
+      <td><%= page.pageable_id %></td>
+      <td><%= page.pageable_type %></td>
+      <td><%= page.page_type %></td>
+      <td><%= page.description %></td>
+      <td><%= page.description_markup %></td>
+      <td><%= link_to "Show", [:my_deck, page] %></td>
+      <td><%= link_to "", edit_my_deck_page_path(page), :class => 'ss_sprite ss_application_edit' %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= will_paginate @pages %>
+
+<p><%= link_to "New Page", new_my_deck_page_path, :class => 'button' %></p>

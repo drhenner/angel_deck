@@ -6,6 +6,19 @@
     <%= f.text_field :name %>
   </li>
   <li class="field">
+    <%= f.label :unique_identifier %>
+    <%= f.text_field :unique_identifier %>
+  </li>
+  <li class="field">
+    <%= f.label :website %>
+    <%= f.text_field :website %>
+  </li>
+  <li class="field">
+    <%= f.label :blog %>
+    <%= f.text_field :blog %>
+  </li>
+
+  <li class="field">
     <%= f.label :city_id, 'Closest City' %>
     <%= f.select :city_id, cities, { :include_blank => true }, :class => 'chzn-select' %>
   </li>

@@ -6,7 +6,7 @@
 <% end %>
 
 <p>
-  <%= link_to "Show", [:my_deck, @company], :class => 'button' %> |
+  <%= link_to "Back to #{@company.name}", [:my_deck, @company], :class => 'button' %>
 </p>
 
 <% content_for :head do -%>

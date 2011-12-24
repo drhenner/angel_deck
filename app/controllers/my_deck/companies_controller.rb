@@ -1,5 +1,4 @@
-class MyDeck::CompaniesController < ApplicationController
-  before_filter :require_user
+class MyDeck::CompaniesController < MyDeck::BaseController
   helper_method :cities
 
   def index
@@ -10,6 +9,8 @@ class MyDeck::CompaniesController < ApplicationController
 
   def show
     @company = Company.find(params[:id])
+    @employee = @company.find_employee(current_user.id)
+    redirect_to root_url(:notice => 'You are not allowed to view this company.') and return unless @employee
   end
 
   def new
@@ -20,6 +21,7 @@ class MyDeck::CompaniesController < ApplicationController
   def create
     @company = Company.new(params[:company])
     if @company.save
+      @company.make_owner(current_user)
       redirect_to [:my_deck, @company], :notice => "Successfully created company."
     else
       form_info

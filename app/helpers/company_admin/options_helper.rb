@@ -1,0 +1,2 @@
+module CompanyAdmin::OptionsHelper
+end

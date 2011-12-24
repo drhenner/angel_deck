@@ -81,7 +81,7 @@
 /* line 73, ../../app/stylesheets/_main_dark_header.scss */
 #dark_header_wrapper #header #menu-main li#menu-main-user div span {
   color: #B2B2B2 !important;
-  font-size: 12px;
+  font-size: 11px;
 }
 /* line 77, ../../app/stylesheets/_main_dark_header.scss */
 #dark_header_wrapper #header #menu-main li#menu-main-user div a {
@@ -489,33 +489,34 @@ div .green-button:hover {
   border-bottom: 1px solid #ECECEC;
   background: url("../../images/header/bg-header-wrap.png") repeat-x scroll center bottom white;
   text-align: left;
+  padding-top: 10px;
   /*margin-top:50px;*/
 }
-/* line 14, ../../app/stylesheets/_main_footer.scss */
+/* line 15, ../../app/stylesheets/_main_footer.scss */
 #footer_wrapper li {
   display: inline;
   list-style: none;
   color: #AA5555;
   padding: 3px;
 }
-/* line 19, ../../app/stylesheets/_main_footer.scss */
+/* line 20, ../../app/stylesheets/_main_footer.scss */
 #footer_wrapper li a {
   color: #828282;
 }
-/* line 22, ../../app/stylesheets/_main_footer.scss */
+/* line 23, ../../app/stylesheets/_main_footer.scss */
 #footer_wrapper li a:hover {
   color: #AA5555;
 }
-/* line 25, ../../app/stylesheets/_main_footer.scss */
+/* line 26, ../../app/stylesheets/_main_footer.scss */
 #footer_wrapper li .selected {
   color: #AA5555 !important;
 }
-/* line 29, ../../app/stylesheets/_main_footer.scss */
+/* line 30, ../../app/stylesheets/_main_footer.scss */
 #footer_wrapper li:hover {
   color: #AA5555;
 }
 
-/* line 33, ../../app/stylesheets/_main_footer.scss */
+/* line 34, ../../app/stylesheets/_main_footer.scss */
 #footer_buffer {
   height: 0.8em;
 }
@@ -748,6 +749,36 @@ div .green-button:hover {
 /* line 15, ../../app/stylesheets/_widget.scss */
 .ar-widget li a {
   color: #666 important;
+}
+/* line 19, ../../app/stylesheets/_widget.scss */
+.ar-widget label {
+  color: #222;
+  display: inline-block;
+  width: 115px;
+}
+
+/* line 26, ../../app/stylesheets/_widget.scss */
+.company-widget {
+  border-left: 1px solid #EEEEEE;
+  padding-left: 10px;
+}
+
+/* line 31, ../../app/stylesheets/_widget.scss */
+#company-option-list li {
+  padding: 10px;
+  border: 1px solid #ddd;
+  font-size: 18px;
+  border-right: 0;
+  background: #f3f3f3;
+  margin-bottom: 10px;
+  -moz-border-radius: 4px 0px 0px 4px;
+  -webkit-border-radius: 4px 0px 0px 4px;
+  cursor: pointer;
+}
+/* line 42, ../../app/stylesheets/_widget.scss */
+#company-option-list li:hover {
+  background: #ddd;
+  border: 1px solid #bbb;
 }
 
 /* line 4, ../../app/stylesheets/_bordered_widgets.scss */

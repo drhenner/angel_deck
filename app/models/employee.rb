@@ -7,5 +7,5 @@ class Employee < ActiveRecord::Base
   has_many :privileges, :through => :employee_privileges
 
   validates :user_id, :presence => true
-  validates :company_id, :presence => true
+  validates :company_id, :presence => true, :uniqueness => {:scope => :user_id}
 end

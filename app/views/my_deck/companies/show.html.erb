@@ -1,10 +1,33 @@
-<h1> <%= company.name %> </h1>
+<h2> <%= @company.name %> </h2>
 
-<div class='span-12 <%= cycle '', 'last' %> '>
-  <%= link_to "", edit_my_deck_company_path(@company), :class => 'ss_sprite ss_application_edit' %>
+<div class='span-12 ar-widget' style='width:455px;'>
+  <h4>Company Details</h4>
   <ul>
     <li><label>Closest City:</label> <%= @company.city.name %></li>
     <li><label>About:</label> <%= @company.brief_description %></li>
   </ul>
-  <%= raw @company.description %>
+
+  <% if @company.pages.size == 0 %>
+    <div>
+      You current do not have a homepage set up.
+    </div>
+  <% end %>
+  <%#= raw @company.main_page_description %>
+  <%= link_to "Change Company", edit_my_deck_company_path(@company), :class => 'button' %>
+</div>
+<div class='span-6 ar-widget' style='width:220px;'>
+  <h4>Your Access:</h4>
+  <ul>
+    <% @employee.privileges.each do |priv| %>
+      <li> <%= priv.name %> </li>
+    <% end %>
+  </ul>
+</div>
+<div class='span-6 last ar-widget' style='width:225px;'>
+  <h4>Employee List:</h4>
+  <ul>
+    <% @company.employees.each do |employee| %>
+      <li> <%= employee.user.name %> </li>
+    <% end %>
+  </ul>
 </div>

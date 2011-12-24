@@ -16,4 +16,32 @@
       color:#666 important;
     }
   }
+  label {
+    color:#222;
+    display:inline-block;
+    width:115px;
+  }
+}
+
+.company-widget {
+  border-left:1px solid #EEEEEE; padding-left: 10px;
+}
+
+#company-option-list {
+  li {
+    padding:10px;
+    border:1px solid #ddd;
+    font-size:18px;
+    border-right:0;
+    background:#f3f3f3;
+    margin-bottom:10px;
+    -moz-border-radius:4px 0px 0px 4px;
+    -webkit-border-radius:4px 0px 0px 4px;
+    cursor:pointer;
+
+    &:hover {
+      background:#ddd;
+      border:1px solid #bbb;
+    }
+  }
 }
