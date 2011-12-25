@@ -21,6 +21,13 @@
     display:inline-block;
     width:115px;
   }
+  .selection {
+    border-top:1px #DDD solid;
+    padding:10px;
+    &:hover {
+      background:#E1EFF8;
+    }
+  }
 }
 
 .company-widget {
@@ -28,20 +35,33 @@
 }
 
 #company-option-list {
-  li {
+  a {
     padding:10px;
-    border:1px solid #ddd;
+    border:1px solid #fff;
     font-size:18px;
-    border-right:0;
-    background:#f3f3f3;
+    background:#fff;
     margin-bottom:10px;
-    -moz-border-radius:4px 0px 0px 4px;
-    -webkit-border-radius:4px 0px 0px 4px;
     cursor:pointer;
-
+    display:block;
+    &.selected {
+      border:1px solid #ddd;
+      border-right:0;
+      background:#f3f3f3;
+      -moz-border-radius:4px 0px 0px 4px;
+      -webkit-border-radius:4px 0px 0px 4px;
+      &:hover{
+        border:1px solid #ddd;
+        border-right:0;
+        background:#f3f3f3;
+      }
+    }
     &:hover {
-      background:#ddd;
-      border:1px solid #bbb;
+      border:1px solid #fff;
+      border-right:0;
+      background:#F6F6F6;
+      -moz-border-radius:4px 0px 0px 4px;
+      -webkit-border-radius:4px 0px 0px 4px;
     }
   }
+
 }
