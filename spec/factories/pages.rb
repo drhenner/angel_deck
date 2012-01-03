@@ -1,3 +1,4 @@
+
 # Read about factories at http://github.com/thoughtbot/factory_girl
 
 FactoryGirl.define do
@@ -5,6 +6,7 @@ FactoryGirl.define do
       pageable { |c| c.association(:company) }
       pageable_type "MyString"
       page_type 'homepage'
+      name 'Test Page'
       description "MyText"
       description_markup "MyText"
     end
