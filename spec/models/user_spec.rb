@@ -246,14 +246,12 @@ describe User, "instance methods" do
       @user.email           = ' bad@email.com '
       @user.first_name      = ' bAd NamE '
       @user.last_name       = ' lastnamE '
-      @user.account         = nil
 
       @user.sanitize_data
 
       @user.email.should        == 'bad@email.com'
       @user.first_name.should   == 'Bad name'
       @user.last_name.should    == 'Lastname'
-      @user.account.should_not  be_nil
     end
   end
 
