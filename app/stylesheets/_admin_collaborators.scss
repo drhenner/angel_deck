@@ -1,0 +1,21 @@
+#company_admin_collaborators {
+  #collaborators_employee_list {
+    li {
+      padding:5px;
+      border:1px solid #AAA;
+      @include rounded(3px);
+      background:#F9F9F9;
+      &:hover {
+        border:1px solid #666;
+      }
+    }
+    .deleteable-item:hover {
+      background-color:#FEE;
+      color:#F66;
+      border:1px solid #F99;
+    }
+    a {
+      color:#6677CC;
+    }
+  }
+}

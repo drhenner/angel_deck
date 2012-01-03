@@ -15,6 +15,10 @@ a {
   text-decoration: none;
 }
 
+.deleteable-item:hover {
+  background-color:#FDD;
+  color:#F66;
+}
 a:hover {
   background-color: transparent;
 }

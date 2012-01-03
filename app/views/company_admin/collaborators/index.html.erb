@@ -1,0 +1,35 @@
+<div id='company_admin_collaborators'>
+  <h2><%= company.name %></h2>
+
+
+  <div class=''>
+      <div class='span-6 column last' style=''>
+        <ul id='company-option-list'>
+          <li>
+            <%= link_to [:company_admin, company, :options], :class => option_selected do %>
+              <label> Options </label>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to company_admin_company_collaborators_path(company), :class => collaborators_selected do %>
+              <label> Employees </label>
+            <% end %>
+          </li>
+        </ul>
+      </div>
+      <div class='span-18 column last company-widget' style='width: 719px;'>
+        <%= render :partial => 'options'%>
+      </div>
+  </div>
+</div>
+
+<%= will_paginate @users %>
+
+<% content_for :head do -%>
+  <%= stylesheet_link_tag 'jquery.autocomplete.css' %>
+<% end %>
+
+<% content_for :bottom do -%>
+  <%= javascript_include_tag 'jquery.autocomplete' %>
+  <%= javascript_include_tag 'company_admin/collaborators' %>
+<% end %>

@@ -1,0 +1,10 @@
+
+<%= render  :partial  => 'shared/breadcrumb_header',
+            :locals   => { :left_header => "New Page >> (#{company.name})"} %>
+
+<%= form_for @page, :url => company_admin_company_pages_path(company,@page) do |f| %>
+  <%=  render :partial => 'form', :locals => {:f => f} %>
+  <div class="actions"><%= f.submit 'Create' , :class => 'button' %></div>
+<% end %>
+
+<p><%= link_to "Back to List", company_admin_company_pages_path(company), :class => 'button' %></p>

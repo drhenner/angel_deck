@@ -1,0 +1,14 @@
+
+  <%= f.error_messages %>
+<ul style='margin-left:3px;'>
+  <% privileges.each do |privilege| %>
+    <li class="field">
+      <span style='display:inline-block;width:140px;'>
+        <%= check_box_tag "employee[privilege_ids][]", privilege.id, @employee.privilege_ids.include?(privilege.id) %>
+        <%= privilege.name %>
+      </span>
+      <span class='span-5'><%= privilege.description %></span>
+    </li>
+  <% end %>
+
+</ul>

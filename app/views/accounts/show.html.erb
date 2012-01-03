@@ -1,0 +1,18 @@
+<h1> Account </h1>
+
+<p>
+  <strong>Name:</strong>
+  <%= @account.name %>
+</p>
+<p>
+  <strong>Account Type:</strong>
+  <%= @account.account_type %>
+</p>
+<p>
+  <strong>Monthly Charge:</strong>
+  <%= @account.monthly_charge %>
+</p>
+
+<p>
+  <%= link_to "Accounts", accounts_path, :class => 'button' %>
+</p>

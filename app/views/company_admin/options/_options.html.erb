@@ -1,0 +1,56 @@
+
+<div class='ar-widget' style='padding:0px;margin-top:0;'>
+  <div class='top-header' style=''>
+    <h3>Company Settings</h3>
+  </div>
+  <div class='widget-content' style='width:100%;'>
+    <div class='selection'>
+      <%= form_for company, :url => [:my_deck, company] do |f| %>
+        <ul class='span-12 column'>
+          <li class="field">
+            <%= f.label :name %>
+            <%= f.text_field :name %>
+          </li>
+          <li class="field">
+            <%= f.label :unique_identifier %>
+            <%= f.text_field :unique_identifier %>
+          </li>
+          <li class="field">
+            <%= f.label :website %>
+            <%= f.text_field :website %>
+          </li>
+          
+          <li class="field">
+            <%= f.label :account_id, 'Billing Plan' %>
+            <%= f.select :account_id, accounts %>
+          </li>
+          
+        </ul>
+        <div class="actions span-4"><%= f.submit 'Update' , :class => 'gh-button' %></div>
+      <% end %>
+      <div class='clear'> </div>
+    </div>
+
+    <div class='clear'> </div>
+  </div>
+  <div class='clear'> </div>
+</div>
+<div class='ar-widget' style='padding:0px;'>
+  <div class='top-header' style=''>
+    <h3>Pages</h3>
+  </div>
+  <div class='widget-content' style='width:100%;'>
+    <div class='selection'>
+      <% if company.pages.empty? %>
+        You currently don't have any pages setup.
+      <% else %>
+        <ul>
+          <% company.pages.each do |page| %>
+            <li><%= link_to page.name, company_admin_company_page_path(company, page) %> (<%= page.page_type %>)</li>
+          <% end %>
+        </ul>
+      <% end %>
+    <%= link_to 'Create a new page.', new_company_admin_company_page_path(company), :class => 'gh-button' %>
+    </div>
+  </div>
+</div>

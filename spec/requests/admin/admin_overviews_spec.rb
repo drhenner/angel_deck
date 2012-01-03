@@ -1,7 +1,7 @@
 require 'spec_helper'
 def cookied_admin_login
    User.acts_as_authentic_config[:maintain_sessions] = false
-   Factory(:admin_user, :email => 'test@admin.com', :password => 'secret1', :password_confirmation => 'secret1')
+   Factory(:admin_user, :email => 'test@admin.com', :user_name => 'test123', :password => 'secret1', :password_confirmation => 'secret1')
    visit login_path
    within("#login") do
      fill_in 'Email',    :with => 'test@admin.com'
@@ -44,7 +44,7 @@ end
 describe "Admin::Overviews" do
   describe "GET /admin_overviews" do
     it "If a user has already been created this page will redirect to root_url for non-admins" do
-      User.create!(:first_name => 'Dave', :last_name => 'Henner',:email => 'test@admin.com', :password => 'secret1', :password_confirmation => 'secret1')
+      User.create!(:first_name => 'Dave', :last_name => 'Henner',:email => 'test@admin.com', :user_name => 'test123', :password => 'secret1', :password_confirmation => 'secret1')
       visit admin_overviews_path
       #response.should redirect_to( root_url)
       page.should have_content('Login or')

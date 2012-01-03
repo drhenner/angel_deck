@@ -1,0 +1,45 @@
+<div class='ar-widget' style='padding:0px;margin-top:0;'>
+  <div class='top-header' style=''>
+    <h2>Create your Company </h2>
+  </div>
+  <div>
+    <div class='plan cplan paid last'>
+      <div class="price" style='position: relative;'>
+        <span class="symbol">​$ </span>
+        <span class="amount">​<%= @account.monthly_charge %>​</span>
+        <span class="duration">​/mo​</span>
+      </div>
+      <h3>​<%= @account.name %>​</h3>
+      <p>
+        <strong>​<%= @account.name %> Company </strong>
+        <%= @account.description %>
+      </p>
+    </div>
+  </div>
+  <div class='widget-content' style='width:100%;'>
+    <div class='selection'>
+      <%= form_for @company, :url => [:registrations, @company] do |f| %>
+        <ul class='span-12 column'>
+          <li class="field">
+            <%= f.label :name %>
+            <%= f.text_field :name %>
+          </li>
+          <li class="field">
+            <%= f.label :unique_identifier %>
+            <%= f.text_field :unique_identifier %>
+          </li>
+          <li class="field">
+            <%= f.label :website %>
+            <%= f.text_field :website %>
+          </li>
+        </ul>
+        <%= f.hidden_field :account_id %>
+        <div class="actions span-4"><%= f.submit 'Update' , :class => 'gh-button' %></div>
+      <% end %>
+      <div class='clear'> </div>
+    </div>
+
+    <div class='clear'> </div>
+  </div>
+  <div class='clear'> </div>
+</div>

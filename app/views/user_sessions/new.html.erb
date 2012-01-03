@@ -79,6 +79,11 @@
               <li>
                   <%=form.label :email, 'Email' %>
                   <%= form.email_field :email %>
+              </li>
+              <li>
+                <%= form.label :user_name %>
+                <%= form.text_field :user_name %>
+              </li>
               <li>
                   <%=form.label :birth_date %>
                   <%= form.text_field :birth_date, :class => 'ui-yearpicker' %>

@@ -13,7 +13,6 @@ describe MyDeck::CompaniesController do
 
   it "index action should render index template" do
     get :index
-    response.should render_template(:index)
     response.should redirect_to(new_my_deck_company_url())
   end
 
@@ -35,8 +34,18 @@ describe MyDeck::CompaniesController do
 
   it "show action should render show template" do
     company = Factory(:company)
+    employee = Factory(:employee, :user => @user, :company => company)
+    Company.any_instance.stubs(:find_employee).returns(employee)
     get :show, :id => company.id
     response.should render_template(:show)
+  end
+
+  it "show action should render show template" do
+    company = Factory(:company)
+    employee = Factory(:employee, :user => @user, :company => company)
+    Company.any_instance.stubs(:find_employee).returns(nil)
+    get :show, :id => company.id
+    response.should be_redirect
   end
 
   it "new action should render new template" do

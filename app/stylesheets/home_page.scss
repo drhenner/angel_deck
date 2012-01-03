@@ -37,6 +37,7 @@ h2 {
   color:#333;
   font-family: minion-pro-1, minion-pro-2, 'Times New Roman', Georgia, serif;
   font-size:41px;
+  margin-bottom: 20px;
 }
 h3 {
   color:#333;
@@ -74,6 +75,7 @@ div#app-features {
     background: #F0F6FF;
     @include rounded(6px);
     font-size:120%;
+    margin-top: 20px;
   }
 
   ul {

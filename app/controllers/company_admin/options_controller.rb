@@ -1,5 +1,5 @@
-class CompanyAdmin::OptionsController < ApplicationController
-  helper_method :company, :option_selected, :collaborators_selected
+class CompanyAdmin::OptionsController < CompanyAdmin::BaseController
+  helper_method :option_selected, :collaborators_selected, :accounts
   def index
     #
   end
@@ -13,8 +13,8 @@ class CompanyAdmin::OptionsController < ApplicationController
       ''
     end
 
-    def company
-      @company ||= current_user.companies.find(params[:company_id])
+    def accounts
+      @accounts ||= Account.all.map{|a| [a.name_with_price, a.id]}
     end
 
     def form_info

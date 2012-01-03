@@ -1,0 +1,53 @@
+<h2> <%= @user.user_name %> (<%= @user.name %>)</h2>
+<hr/>
+<div class=''>
+  <div class='span-12'>
+    <ul id='profile_user_details'>
+      <li>
+        <label>Name</label>
+        <%= @user.name %>
+      </li>
+      <li>
+        <label>Birth Date:</label>
+        <%= @user.birth_date %>
+      </li>
+      <li>
+        <label>Email:</label>
+        <%= @user.email %>
+      </li>
+      <li>
+        <label>Website</label>
+        <%#= @user.state %>
+      </li>
+
+      <li>
+        <label>Location</label>
+        <%#= @user.state %>
+      </li>
+      <li>
+        <label>Member Since:</label>
+        <%= @user.created_at %>
+      </li>
+    </ul>
+  </div>
+  <div class='span-12 last'>
+  </div>
+  <hr/>
+</div>
+<div class=''>
+  <div class='span-12'>
+    <h3>Companies</h3>
+
+    <ul id='companies-list'>
+      <% @user.companies.each do |company| %>
+        <li>
+          <%= company.name %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class='span-12 last'>
+    <h3>Activity</h3>
+  </div>
+</div>

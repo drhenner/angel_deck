@@ -27,7 +27,6 @@ if (typeof Hadean.Admin.products == "undefined") {
           return false;
         },
         removeVariant : function(obj){
-          kk = obj;
           jQuery(obj).closest( '.new_variant_container' ).html('');
         }
     };

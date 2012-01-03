@@ -19,6 +19,11 @@
   </li>
 
   <li class="field">
+    <%= f.label :company_type %>
+    <%= f.text_field :company_type %>
+  </li>
+
+  <li class="field">
     <%= f.label :city_id, 'Closest City' %>
     <%= f.select :city_id, cities, { :include_blank => true }, :class => 'chzn-select' %>
   </li>

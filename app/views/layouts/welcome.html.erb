@@ -36,7 +36,11 @@
             <%= link_to site_name, root_path %>
           </h1>
           <ul id="menu-main">
-
+            <% if most_likely_user %>
+              <li id="menu-main-account" class='my-account'>
+                <%= link_to_unless_current 'My Account', myaccount_overview_path, :class => 'nav' %>
+              </li>
+            <% end %>
             <li class="" id="menu-main-user">
               <div>
                 <% unless most_likely_user %>
@@ -51,11 +55,6 @@
 
           </ul>
 
-        </div>
-      </div>
-      <div id="sub_header_wrapper" class='bp'>
-        <div id="sub_sub_header_wrapper" class='container'>
-          <%= render 'shared/main_product_tabs' %>
         </div>
       </div>
     </div>

@@ -1,0 +1,11 @@
+<h1> Edit Page </h1>
+
+<%= form_for @page, :url => [:company_admin,company, @page] do |f| %>
+  <%=  render :partial => 'form', :locals => {:f => f} %>
+  <div class="actions"><%= f.submit 'Update' , :class => 'button' %></div>
+<% end %>
+
+<p>
+  <%= link_to "Show", [:company_admin,company, @page], :class => 'button' %> |
+  <%= link_to "View All", company_admin_company_pages_path(company), :class => 'button' %>
+</p>

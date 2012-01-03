@@ -1,0 +1,33 @@
+
+<div class='ar-widget' style='padding:0px;margin-top:0;'>
+  <div class='top-header' style=''>
+    <h3>Employees</h3>
+  </div>
+  <div class='widget-content' style='width:100%;'>
+    <div class='selection'>
+        <ul id='collaborators_employee_list'>
+          <% @users.each do |user| %>
+            <li>
+              <%= link_to user.name, company_admin_company_collaborator_path(company, user) %>
+              <% if (user.id != current_user.id) && @current_employee.can_remove_employees? %>
+                <span  style='float:right;' 
+                        data-company_unique='<%= company.unique_identifier %>' 
+                        data-user_id='<%= user.id %>' 
+                        class='ss_sprite ss_cross delete-list-user'></span>
+              <% end %>
+            </li>
+          <% end %>
+        </ul>
+        <%= form_for @employee, :url => company_admin_company_collaborators_path(company) do |f| %>
+          <%= text_field_tag 'query', '', :class => 'span-10 column', :placeholder => 'Enter user\'s email' %>
+          <%= f.hidden_field :user_id %>
+          <div class="inline-button"><%= f.submit 'Add' , :class => 'button' %></div>
+        <% end %>
+      <div class='clear'> </div>
+    </div>
+
+    <div class='clear'> </div>
+  </div>
+  <div class='clear'> </div>
+</div>
+

@@ -7,6 +7,7 @@ module Hadean
 
       #u ||= Factory(user)
       controller.stubs(:current_user).returns(user)
+      ApplicationController.stubs(:current_user).returns(user)
       #u
     end
 

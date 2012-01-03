@@ -1,0 +1,95 @@
+
+
+<div id='accounts_wrapper'>
+  <h2> Plans & Pricing </h2>
+  <div class='plan cplan free last'>
+    <div class="price" style='position: relative;'>
+      <span class="symbol">​$ </span>
+      <span class="amount">​0​</span>
+      <span class="duration">​/mo​</span>
+    </div>
+    <%= link_to free_signup_path, :class => "gh-button classy" do %>
+      <span>​Create a free account​</span>
+    <% end %>
+    <h3>​Free for public viewing​</h3>
+    <p>
+      <strong>​Unlimited </strong>
+      companies that can be seen by the public.
+    </p>
+  </div>
+  <div class='plan cplan paid last'>
+    <div class="price" style='position: relative;'>
+      <span class="symbol">​$ </span>
+      <span class="amount">​8​</span>
+      <span class="duration">​/mo​</span>
+    </div>
+    <%= link_to semi_private_path, :class => "gh-button classy" do %>
+      <span>​Create a Semi-Private​</span>
+    <% end %>
+    <h3>​Semi-Private​</h3>
+    <p>
+      <strong>​Semi-Private Company </strong>
+      allows premium Investors to view the Company Details.
+    </p>
+  </div>
+  <div class='plan cplan paid last'>
+    <div class="price" style='position: relative;'>
+      <span class="symbol">​$ </span>
+      <span class="amount">​14​</span>
+      <span class="duration">​/mo​</span>
+    </div>
+    <%= link_to private_account_path, :class => "gh-button classy" do %>
+      <span>​Create a Private account​</span>
+    <% end %>
+    <h3>​Private​</h3>
+    <p>
+      <strong>​Private Company </strong>
+      only employees in your company have access.
+    </p>
+  </div>
+  <div class='plan cplan paid last'>
+    <div class="price" style='position: relative;'>
+      <span class="symbol">​$ </span>
+      <span class="amount">​25​</span>
+      <span class="duration">​/mo​</span>
+    </div>
+    <%= link_to selective_account_path, :class => "gh-button classy" do %>
+      <span>​Create a Selective account​</span>
+    <% end %>
+    <h3>​Selective​</h3>
+    <p>
+      <strong>​Create a Selective account </strong>
+      you can select which investors can view your account.
+    </p>
+  </div>
+  <hr/>
+  <h2> Investor Plans & Pricing </h2>
+  <div class='plan cplan free investor last'>
+    <div class="price" style='position: relative;'>
+      <span class="symbol">​$ </span>
+      <span class="amount">​0​</span>
+      <span class="duration">​/mo​</span>
+    </div>
+    <%= link_to free_investor_account_path, :class => "gh-button classy" do %>
+      <span>​Create an investor account​</span>
+    <% end %>
+    <h3> Investor​</h3>
+    <p>
+      Ability to view non-private companies.
+    </p>
+  </div>
+  <div class='plan cplan investor last'>
+    <div class="price" style='position: relative;'>
+      <span class="symbol">​$ </span>
+      <span class="amount">​100​</span>
+      <span class="duration">​/mo​</span>
+    </div>
+    <%= link_to investor_account_path, :class => "gh-button classy" do %>
+      <span>​Create a premium investor account​</span>
+    <% end %>
+    <h3>​Premium Investor​</h3>
+    <p>
+      View companies with semi-private accounts.
+    </p>
+  </div>
+</div>

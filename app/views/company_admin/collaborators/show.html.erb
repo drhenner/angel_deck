@@ -1,0 +1,48 @@
+
+<%= render  :partial  => 'shared/breadcrumb_header',
+            :locals   => { :left_header => "#{@user.name} (#{company.name})"} %>
+
+<div class='span-8'>
+  <h4>Overview</h4>
+
+  <ul>
+    <li>
+      <label>Birth Date:</label>
+      <%= @user.form_birth_date %>
+    </li>
+    <li>
+      <label>Email:</label>
+      <%= @user.email %>
+    </li>
+  </ul>
+</div>
+<div class='span-8'>
+  <h4>Privileges</h4>
+  <% if @user_employee.privileges.empty? %>
+    <p><%= @user.name %> current has no privileges. </p>
+  <% else %>
+    <p>
+      <% if @user_employee.title %>
+        <%= @user.name.possessive %> title is <%= @user_employee.title %>.
+      <% else %>
+        <%= @user.name %> does not have a title assigned.
+      <% end %>
+      <% if @user.id == company.maintainer_id %>
+        <%= @user.first_name.possessive %> is the current Maintainer of <%= company.name %>.
+      <% end %>
+    </p>
+    <ul>
+      <% @user_employee.privileges.each do |privilege| %>
+        <li><%= privilege.name %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <% if (@user.id != company.maintainer_id) && company.user_is_admin?(current_user) %>
+    <%= link_to "Change Privileges", edit_company_admin_company_privilege_path(company, @user_employee), :class => 'button' %>
+  <% end %>
+</div>
+<p>
+  <%#= link_to "Edit", edit_company_admin_user_path(@user), :class => 'button' %>
+  <%= link_to "#{company.name.possessive} Employees", company_admin_company_collaborators_path(company), :class => 'button' %>
+</p>

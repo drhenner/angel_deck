@@ -1,0 +1,21 @@
+<h1> Pages </h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Page Type</th>
+  </tr>
+  <% for page in @pages %>
+    <tr>
+      <td><%= page.name %></td>
+      <td><%= page.page_type %></td>
+      <td><%= link_to "Show", company_admin_company_page_path(company, page) %></td>
+      <td><%= link_to "", edit_company_admin_company_page_path(company, page), :class => 'ss_sprite ss_application_edit' %></td>
+      <td><%= link_to "", company_admin_company_page_path(company, page), :confirm => 'Are you sure?', :method => :delete, :class => 'ss_sprite ss_cross' %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= will_paginate @pages %>
+
+<p><%= link_to "New Page", new_company_admin_company_page_path(company), :class => 'button' %></p>

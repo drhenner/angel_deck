@@ -1,0 +1,12 @@
+
+<%= render  :partial  => 'shared/breadcrumb_header',
+            :locals   => { :left_header => "#{@page.name} >> (#{@page.page_type})"} %>
+
+<div>
+  <%= @page.description_markup.html_safe %>
+</div>
+
+<p>
+  <%= link_to "Edit", edit_company_admin_company_page_path(company, @page), :class => 'button' %> |
+  <%= link_to "Remove Page", [:company_admin, company, @page], :confirm => 'Are you sure?', :method => :delete, :class => 'button' %>
+</p>

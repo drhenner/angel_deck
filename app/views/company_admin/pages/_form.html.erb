@@ -1,0 +1,41 @@
+
+  <%= f.error_messages %>
+<ul>
+
+  <li class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </li>
+  <li class="field">
+    <%= f.label :page_type %>
+    <%= f.select :page_type, ['Home Page', 'Deck', 'Financial'] %>
+  </li>
+
+
+</ul>
+<div class="field">
+  <%= f.label :description_markup, 'Description' %>
+  <%= f.text_area :description_markup %>
+</div>
+
+
+
+
+
+  <% content_for :head do -%>
+    <%#= stylesheet_link_tag 'jquery.autocomplete.css' %>
+  <% end %>
+
+  <% content_for :bottom do -%>
+    <%= javascript_include_tag "ckeditor/ckeditor.js" %>
+    <script>
+    $(function(){
+        CKEDITOR.replace( 'page_description_markup',
+          {
+            // Optional params:
+            // skin : 'office2003',
+            height: '300px'
+          });
+      })
+    </script>
+  <% end %>

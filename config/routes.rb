@@ -5,9 +5,19 @@ Hadean::Application.routes.draw do # |map|
   match 'admin'   => 'admin/overviews#index'
   match 'login'   => 'user_sessions#new'
   match 'logout'  => 'user_sessions#destroy'
-  match 'signup'  => 'customer/registrations#new'
+  match 'signup'  => 'accounts#index'
+
+  match 'free_signup'  => 'customer/registrations#new?account_type=Free'
+  match 'semi_private'  => 'customer/registrations#new?account_type=Semi-Private'
+  match 'private_account'  => 'customer/registrations#new?account_type=Private'
+  match 'selective_account'  => 'customer/registrations#new?account_type=Selective'
+  match 'free_investor_account'  => 'customer/registrations#new?account_type=Investor'
+  match 'investor_account'  => 'customer/registrations#new?account_type=Premium Investor'
+
   match 'admin/merchandise' => 'admin/merchandise/summary#index'
   resources :products, :only => [:index, :show, :create]
+
+  resources :accounts, :only => [:index, :show]
 
   resources :wish_items,  :only => [:index, :destroy]
   resources :states,      :only => [:index]
@@ -16,15 +26,26 @@ Hadean::Application.routes.draw do # |map|
 
   root :to => "welcome#index"
 
+  namespace :registrations do
+    resources :companies
+  end
+
+  namespace :profiles do
+    resources :users, :only => :show
+  end
+
   namespace :my_deck do
     resources :companies
-    resources :pages
+    #resources :pages
   end
 
   namespace :company_admin do
+    resources :users,      :only => [:index]
     resources :companies do
-      resources :options,      :only => [:index]
-      #resources :pages
+      resources :options,     :only => [:index]
+      resources :collaborators,  :only => [:index, :show, :create, :destroy]
+      resources :pages
+      resources :privileges,  :only => [:edit, :update, :destroy]
     end
   end
 
