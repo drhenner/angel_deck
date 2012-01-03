@@ -8,4 +8,12 @@ class Employee < ActiveRecord::Base
 
   validates :user_id, :presence => true
   validates :company_id, :presence => true, :uniqueness => {:scope => :user_id}
+
+  def can_remove_employees?
+    admin?
+  end
+
+  def admin?
+    privileges.map(&:name).include?('admin')
+  end
 end

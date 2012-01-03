@@ -21,13 +21,7 @@
 #
 
 class User < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :token_authenticatable, :lockable and :timeoutable
-#  devise :database_authenticatable, :registerable, :confirmable,
-#         :recoverable, :rememberable, :trackable, :validatable
-
-  # Setup accessible (or protected) attributes for your model
-  #include ActiveMerchant::Utils
+  has_friendly_id :user_name, :use_slug => false
   include UserCim
 
   acts_as_authentic do |config|
@@ -57,12 +51,13 @@ class User < ActiveRecord::Base
                   :birth_date,
                   :form_birth_date,
                   :address_attributes,
-                  :phone_attributes
+                  :phone_attributes,
+                  :user_name
+
+  attr_accessor :account_step
 
   has_many :employees# is an employee at many places
   has_many :companies, :through => :employees
-
-  belongs_to :account
 
   has_one     :store_credit
   has_many    :orders
@@ -126,6 +121,8 @@ class User < ActiveRecord::Base
   validates :first_name,  :presence => true, :if => :registered_user?,
                           :format   => { :with => CustomValidators::Names.name_validator },
                           :length => { :maximum => 30 }
+
+  validates :user_name,   :presence => true, :length => { :minimum => 3, :maximum => 35 }
   validates :last_name,   :presence => true, :if => :registered_user?,
                           :format   => { :with => CustomValidators::Names.name_validator },
                           :length => { :maximum => 35 }
@@ -180,6 +177,10 @@ class User < ActiveRecord::Base
   # @return [ String ]
   def display_active
     active?.to_s
+  end
+
+  def email_first_last
+    [email, "(#{first_name} #{last_name})"].join(' ')
   end
 
   # returns true or false if the user has a role or not
@@ -284,11 +285,6 @@ class User < ActiveRecord::Base
     self.email      = self.email.strip.downcase       unless email.blank?
     self.first_name = self.first_name.strip.capitalize  unless first_name.nil?
     self.last_name  = self.last_name.strip.capitalize   unless last_name.nil?
-
-    ## CHANGE THIS IF YOU HAVE DIFFERENT ACCOUNT TYPES
-    unless account_id
-      self.account = Account.first
-    end
   end
 
   # email activation instructions after a user signs up
