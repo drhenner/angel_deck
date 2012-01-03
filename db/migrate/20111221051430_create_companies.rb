@@ -7,6 +7,7 @@ class CreateCompanies < ActiveRecord::Migration
       t.string :blog
       t.text :brief_description
       t.integer :city_id
+      t.integer :maintainer_id
 
       t.timestamps
     end
@@ -14,5 +15,6 @@ class CreateCompanies < ActiveRecord::Migration
     add_index :companies, :name
     add_index :companies, :unique_identifier, :unique => true
     add_index :companies, :city_id
+    add_index :companies, :maintainer_id
   end
 end
