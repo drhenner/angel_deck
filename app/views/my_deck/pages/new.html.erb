@@ -1,8 +1,0 @@
-<h1> New Page </h1>
-
-<%= form_for @page, :url => my_deck_pages_path(@page) do |f| %>
-  <%=  render :partial => 'form', :locals => {:f => f} %>
-  <div class="actions"><%= f.submit 'Create' , :class => 'button' %></div>
-<% end %>
-
-<p><%= link_to "Back to List", my_deck_pages_path, :class => 'button' %></p>

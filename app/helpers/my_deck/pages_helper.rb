@@ -1,2 +1,0 @@
-module MyDeck::PagesHelper
-end
