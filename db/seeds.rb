@@ -52,7 +52,7 @@ end
 Account::TYPES.each_pair do |acc_type, value|
   acc = Account.find_by_name(acc_type)
   unless acc
-    Account.create(:name => acc_type, :account_type => acc_type, :monthly_charge => value)
+    Account.create(value)
   end
 end
 
