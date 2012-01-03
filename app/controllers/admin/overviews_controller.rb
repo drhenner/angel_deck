@@ -16,6 +16,7 @@ class Admin::OverviewsController < ApplicationController
       @user = User.new(:first_name => 'Admin',
                        :last_name => 'User',
                        :email => 'admin@notarealemail.com',
+                       :user_name => 'drhenner',
                        :password => @password,
                        :password_confirmation => @password)
       @user.role_ids = Role.all.collect{|r| r.id }
