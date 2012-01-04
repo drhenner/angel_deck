@@ -25,6 +25,7 @@ Hadean::Application.routes.draw do # |map|
   resources :wish_items,  :only => [:index, :destroy]
   resources :states,      :only => [:index]
   resource :about,        :only => [:show]
+  resource :privacy,      :only => [:show]
   resources :terms,       :only => [:index]
 
   root :to => "welcome#index"
