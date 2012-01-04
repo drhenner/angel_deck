@@ -10,6 +10,7 @@ class AccountsController < ApplicationController
   end
 
   private
+
     def form_info
 
     end

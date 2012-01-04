@@ -7,12 +7,15 @@ Hadean::Application.routes.draw do # |map|
   match 'logout'  => 'user_sessions#destroy'
   match 'signup'  => 'accounts#index'
 
-  match 'free_signup'  => 'customer/registrations#new?account_type=Free'
-  match 'semi_private'  => 'customer/registrations#new?account_type=Semi-Private'
-  match 'private_account'  => 'customer/registrations#new?account_type=Private'
-  match 'selective_account'  => 'customer/registrations#new?account_type=Selective'
-  match 'free_investor_account'  => 'customer/registrations#new?account_type=Investor'
-  match 'investor_account'  => 'customer/registrations#new?account_type=Premium Investor'
+  match 'free_signup'  => 'customer/registrations#new'
+  match 'semi_private'  => 'customer/registrations#new'
+  match 'private_account'  => 'customer/registrations#new'
+  match 'selective_account'  => 'customer/registrations#new'
+  match 'free_investor_account'  => 'customer/registrations#new'
+  match 'investor_account'  => 'customer/registrations#new'
+
+# match "account/overview/:id", :as => "overview"
+#  get 'register/:participant_type_id', :action => 'register'
 
   match 'admin/merchandise' => 'admin/merchandise/summary#index'
   resources :products, :only => [:index, :show, :create]

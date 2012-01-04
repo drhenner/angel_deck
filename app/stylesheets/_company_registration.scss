@@ -1,0 +1,35 @@
+#company_registration {
+  .company_info {
+    width:50%;
+    border-right:2px dashed #EEE;
+    border-top:0px solid #fff;
+    float:left;
+
+    h3 {
+      text-align:left;
+      color:#6699EE;
+    }
+    &.selection:hover {
+      background:#FFF;
+    }
+  }
+  h2 {
+    text-align:left;
+  }
+  #agree_to_terms {
+    background:#f6ffcF;
+    border-top:1px solid #996644;
+    border-bottom:1px solid #996644;
+    margin-bottom: 15px;
+    padding: 5px;
+  }
+  .account_perks {
+    //float:left;
+    padding:10px;
+
+    li {
+      list-style:circle;
+      margin-left: 20px;
+    }
+  }
+}

@@ -1382,12 +1382,12 @@ a.gh-button.classy span {
 }
 
 /* line 1, ../../app/stylesheets/_plans.scss */
-#accounts_wrapper {
+#accounts_wrapper, .plans_wrapper {
   display: block;
   text-align: left;
 }
 /* line 4, ../../app/stylesheets/_plans.scss */
-#accounts_wrapper .plan {
+#accounts_wrapper .plan, .plans_wrapper .plan {
   margin: 10px 0;
   padding: 10px;
   -webkit-font-smoothing: antialiased;
@@ -1399,7 +1399,7 @@ a.gh-button.classy span {
   font-family: helvetica,arial,freesans,clean,sans-serif;
 }
 /* line 14, ../../app/stylesheets/_plans.scss */
-#accounts_wrapper .plan.cplan {
+#accounts_wrapper .plan.cplan, .plans_wrapper .plan.cplan {
   margin: 20px 0;
   height: 40px;
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#fafafa',endColorstr='#eeeeee');
@@ -1408,7 +1408,7 @@ a.gh-button.classy span {
   border-color: #E1E1E1;
 }
 /* line 21, ../../app/stylesheets/_plans.scss */
-#accounts_wrapper .plan.cplan h3 {
+#accounts_wrapper .plan.cplan h3, .plans_wrapper .plan.cplan h3 {
   margin: 1px 0 0 0;
   font-size: 16px;
   color: black;
@@ -1417,18 +1417,18 @@ a.gh-button.classy span {
   line-height: 1.4;
 }
 /* line 30, ../../app/stylesheets/_plans.scss */
-#accounts_wrapper .plan.cplan p {
+#accounts_wrapper .plan.cplan p, .plans_wrapper .plan.cplan p {
   color: #666;
   color: rgba(0, 0, 0, 0.6);
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.8);
 }
 /* line 35, ../../app/stylesheets/_plans.scss */
-#accounts_wrapper .plan.cplan .gh-button {
+#accounts_wrapper .plan.cplan .gh-button, .plans_wrapper .plan.cplan .gh-button {
   margin: 1px 0 0 0;
   float: right;
 }
 /* line 39, ../../app/stylesheets/_plans.scss */
-#accounts_wrapper .plan.cplan .price {
+#accounts_wrapper .plan.cplan .price, .plans_wrapper .plan.cplan .price {
   float: left;
   margin-right: 12px;
   height: 100%;
@@ -1444,28 +1444,28 @@ a.gh-button.classy span {
   border-image: initial;
 }
 /* line 53, ../../app/stylesheets/_plans.scss */
-#accounts_wrapper .plan.cplan .price .symbol {
+#accounts_wrapper .plan.cplan .price .symbol, .plans_wrapper .plan.cplan .price .symbol {
   position: relative;
   top: -14px;
   color: #666;
   font-size: 20px;
 }
 /* line 59, ../../app/stylesheets/_plans.scss */
-#accounts_wrapper .plan.cplan .price .amount {
+#accounts_wrapper .plan.cplan .price .amount, .plans_wrapper .plan.cplan .price .amount {
   position: relative;
   top: -4px;
   font-size: 34px;
   color: black;
 }
 /* line 65, ../../app/stylesheets/_plans.scss */
-#accounts_wrapper .plan.cplan .price .duration {
+#accounts_wrapper .plan.cplan .price .duration, .plans_wrapper .plan.cplan .price .duration {
   position: relative;
   top: -4px;
   color: #999;
   font-size: 16px;
 }
 /* line 73, ../../app/stylesheets/_plans.scss */
-#accounts_wrapper .plan.free {
+#accounts_wrapper .plan.free, .plans_wrapper .plan.free {
   background: #FBF9DA;
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#fefef3',endColorstr='#fbf8d4');
   background: -webkit-gradient(linear, 0% 0, 0% 100%, from(#fefef3), to(#fbf8d4));
@@ -1473,15 +1473,15 @@ a.gh-button.classy span {
   border-color: #E7E4C2;
 }
 /* line 79, ../../app/stylesheets/_plans.scss */
-#accounts_wrapper .plan.free:hover {
+#accounts_wrapper .plan.free:hover, .plans_wrapper .plan.free:hover {
   border-color: #D6D2AC;
 }
 /* line 82, ../../app/stylesheets/_plans.scss */
-#accounts_wrapper .plan.free p {
+#accounts_wrapper .plan.free p, .plans_wrapper .plan.free p {
   color: #4E4D29;
 }
 /* line 86, ../../app/stylesheets/_plans.scss */
-#accounts_wrapper .plan.paid {
+#accounts_wrapper .plan.paid, .plans_wrapper .plan.paid {
   background: #F1FEF4;
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#F1FEF4',endColorstr='#C4E6BD');
   background: -webkit-gradient(linear, 0% 0, 0% 100%, from(#f1fef4), to(#c4e6bd));
@@ -1489,15 +1489,15 @@ a.gh-button.classy span {
   border-color: #C7E2C4;
 }
 /* line 92, ../../app/stylesheets/_plans.scss */
-#accounts_wrapper .plan.paid:hover {
+#accounts_wrapper .plan.paid:hover, .plans_wrapper .plan.paid:hover {
   border-color: #C7E2C4;
 }
 /* line 95, ../../app/stylesheets/_plans.scss */
-#accounts_wrapper .plan.paid p {
+#accounts_wrapper .plan.paid p, .plans_wrapper .plan.paid p {
   color: #4E4D29;
 }
 /* line 99, ../../app/stylesheets/_plans.scss */
-#accounts_wrapper .plan.investor {
+#accounts_wrapper .plan.investor, .plans_wrapper .plan.investor {
   background: #F9DAFB;
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#fef3fe',endColorstr='#fbD4f8');
   background: -webkit-gradient(linear, 0% 0, 0% 100%, from(#fef3fe), to(#fbd4f8));
@@ -1505,20 +1505,20 @@ a.gh-button.classy span {
   border-color: #E4C2E7;
 }
 /* line 105, ../../app/stylesheets/_plans.scss */
-#accounts_wrapper .plan.investor:hover {
+#accounts_wrapper .plan.investor:hover, .plans_wrapper .plan.investor:hover {
   border-color: #D2ACD6;
 }
 /* line 108, ../../app/stylesheets/_plans.scss */
-#accounts_wrapper .plan.investor p {
+#accounts_wrapper .plan.investor p, .plans_wrapper .plan.investor p {
   color: #4D294E;
 }
 /* line 112, ../../app/stylesheets/_plans.scss */
-#accounts_wrapper .plan p {
+#accounts_wrapper .plan p, .plans_wrapper .plan p {
   margin: 0;
   font-size: 12px;
 }
 /* line 116, ../../app/stylesheets/_plans.scss */
-#accounts_wrapper .plan .price {
+#accounts_wrapper .plan .price, .plans_wrapper .plan .price {
   float: right;
 }
 
@@ -1552,6 +1552,44 @@ a.gh-button.classy span {
   background: #F4F4F4;
   border-bottom: 1px solid #ddd;
   padding: 10px;
+}
+
+/* line 2, ../../app/stylesheets/_company_registration.scss */
+#company_registration .company_info {
+  width: 50%;
+  border-right: 2px dashed #EEE;
+  border-top: 0px solid #fff;
+  float: left;
+}
+/* line 8, ../../app/stylesheets/_company_registration.scss */
+#company_registration .company_info h3 {
+  text-align: left;
+  color: #6699EE;
+}
+/* line 12, ../../app/stylesheets/_company_registration.scss */
+#company_registration .company_info.selection:hover {
+  background: #FFF;
+}
+/* line 16, ../../app/stylesheets/_company_registration.scss */
+#company_registration h2 {
+  text-align: left;
+}
+/* line 19, ../../app/stylesheets/_company_registration.scss */
+#company_registration #agree_to_terms {
+  background: #f6ffcF;
+  border-top: 1px solid #996644;
+  border-bottom: 1px solid #996644;
+  margin-bottom: 15px;
+  padding: 5px;
+}
+/* line 26, ../../app/stylesheets/_company_registration.scss */
+#company_registration .account_perks {
+  padding: 10px;
+}
+/* line 30, ../../app/stylesheets/_company_registration.scss */
+#company_registration .account_perks li {
+  list-style: circle;
+  margin-left: 20px;
 }
 
 /* line 1, ../../app/stylesheets/_main_product_tabs.scss */
