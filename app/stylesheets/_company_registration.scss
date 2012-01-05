@@ -32,4 +32,18 @@
       margin-left: 20px;
     }
   }
+  .payment-errors {
+    color:#F66;
+    background:#fff3f3;
+    border-top:1px solid #ccAA88;
+    border-bottom:1px solid #ccAA88;
+    margin-bottom: 15px;
+    padding: 5px;
+  }
+  .field_with_errors {
+    display:inline-block;
+    &label {
+      color:#ee2222;
+    }
+  }
 }

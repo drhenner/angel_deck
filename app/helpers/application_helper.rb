@@ -35,4 +35,9 @@ EXAMPLE USAGE!!
       end
     end
   end
+
+  def set_error_class(model, method)
+    return ''  if error_message_on(model, method).blank?
+    ' error'
+  end
 end

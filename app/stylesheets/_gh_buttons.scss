@@ -36,6 +36,23 @@ http://github.com/necolas/css3-github-buttons
     /* IE hacks */
     zoom: 1;
     *display: inline;
+
+    &.green {
+      font:13px/normal sans-serif;
+      padding: 0.9em 1.3em;
+      text-shadow: 0px 0px 0 rgba(0,0,0,0);
+      border-color: #3fb53a;
+      border-bottom-color: #30a02a;
+      color: #fff;
+      background-color: #5fdc59;
+      background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#36b330), to(#5fdc59));
+      background-image: -moz-linear-gradient(#36b330, #5fdc59);
+      background-image: -o-linear-gradient(#36b330, #5fdc59);
+      background-image: linear-gradient(#36b330, #5fdc59);
+      &:hover {
+        color: #fff;
+      }
+    }
 }
 
 .gh-button:hover,
@@ -452,6 +469,9 @@ a.gh-button.classy {
     background: -webkit-gradient(linear,0% 0,0% 100%,from(#66C7E5),to(#328FC9));
     background: -moz-linear-gradient(-90deg,#66C7E5,#328FC9);
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#66c7e5',endColorstr='#328fc9');
+  }
+  &:visited {
+    color: #BED7E1;
   }
   strong {
     display: block;

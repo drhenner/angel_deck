@@ -9,8 +9,8 @@ class Registrations::CompaniesController < ApplicationController
   def create
     @company = Company.new(params[:company])
     @company.account_id ||= Account::FREE_ID
-    if @company.save
-      redirect_to root_url, :notice => "Successfully created company."
+    if @company.create_with_payment(current_user)
+      redirect_to my_deck_company_url(@company), :notice => "Successfully created company."
     else
       form_info
       @account = @company.account
@@ -18,7 +18,7 @@ class Registrations::CompaniesController < ApplicationController
     end
   end
 
-  private
+  protected
     def account_type
       params[:account_type] && Account::TYPES[params[:account_type]]
     end

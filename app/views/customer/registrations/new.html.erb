@@ -6,53 +6,89 @@
     <div class='plan cplan paid last'>
       <div class="price" style='position: relative;'>
         <span class="symbol">​$ </span>
-        <span class="amount">​<%= @account.monthly_charge %>​</span>
+        <span class="amount">​<%= account.monthly_charge.to_i %>​</span>
         <span class="duration">​/mo​</span>
       </div>
-      <h3>​<%= @account.name %>​</h3>
+      <h3>​<%= account.name %>​</h3>
       <p>
-        <strong>​<%= @account.name %> Company </strong>
-        <%= @account.description %>
+        <strong>​<%= account.name %> Company </strong>
+        <%= account.description %>
       </p>
     </div>
   </div>
   <div class=' ar-widget' >
     <div class='selection company_info'  style=''>
       <h3> Company Info </h3>
-      <%= form_for @company, :url => [:registrations, @company] do |f| %>
+      <%= form_for @company, :url => customer_registrations_path( @company) do |f| %>
         <ul class='span-12 column'>
           <li class="field">
-            <%= f.label :name %>
-            <%= f.text_field :name %>
+            <%= f.label :name, 'Name *' %>
+            <%= f.text_field :name, :class => set_error_class(@company, :name) %>
           </li>
           <li class="field">
-            <%= f.label :unique_identifier %>
-            <%= f.text_field :unique_identifier %>
+            <%= f.label :unique_identifier, 'Unique Identifier *' %>
+            <%= f.text_field :unique_identifier, :class => set_error_class(@company, :unique_identifier) %>
           </li>
           <li class="field">
             <%= f.label :website %>
-            <%= f.text_field :website %>
+            <%= f.text_field :website, :class => set_error_class(@company, :website) %>
+          </li>
+          <li class="field">
+            <%= f.label :city_id, 'Closest City *' %>
+            <%= f.select :city_id, cities, { :include_blank => true }, :class => 'chzn-select' %>
           </li>
         </ul>
         <%= f.hidden_field :account_id %>
-        <% if @account.monthly_charge >= 0.01 %>
+        <% if account.monthly_charge >= 0.01 %>
           <h3> Billing Details </h3>
           <ul class='span-12 column'>
+            <%= f.hidden_field :stripe_card_token %>
             <li class="field">
-              <%= f.label :website, 'Card Number'%>
-              <%= f.text_field :website %>
+              <%= label_tag 'Card Number *'%>
+              <%= text_field_tag(:number, @credit_card.number ,
+                                :style => 'font-size:12px;',
+                                :class => 'span-5 disableAutoComplete',
+                                :autocomplete => "off",
+                                :maxlength => 20, name: nil) %>
+              <%= hidden_field_tag('token_amount', nil) %>
+            </li>
+
+            <li class="field">
+              <%= label_tag :verification_value, 'VCC *'%>
+              <%= text_field_tag(:verification_value, @credit_card.verification_value ,
+                                  :class => 'span-1 disableAutoComplete',
+                                  :style => 'font-size:12px;',
+                                  :autocomplete => "off",
+                                  :maxlength => 4) %>
             </li>
             <li class="field">
-              <%= f.label :website, 'Expiration Date'%>
-              <%= f.text_field :website %>
+              <%= f.label :expiration, 'Expiration Date *'%>
+              <%= select_tag(:month,
+                              options_for_select([
+                                ['01 - JAN','01'],
+                                ['02 - FEB','02'],
+                                ['03 - MAR','03'],
+                                ['04 - APR','04'],
+                                ['05 - MAY','05'],
+                                ['06 - JUN','06'],
+                                ['07 - JULY','07'],
+                                ['08 - AUG','08'],
+                                ['09 - SEPT','09'],
+                                ['10 - OCT','10'],
+                                ['11 - NOV','11'],
+                                ['12 - DEC','12']])) %>
+
+              <%= select_tag(:year, options_for_select((Time.zone.now.year..(Time.zone.now.year + 10)))) %>
             </li>
           </ul>
         <% end %>
         <div class='clear'> </div>
+        <div class='payment-errors' style="<%= 'display:none;' unless @company.errors[:base] %>"> <%= raw @company.errors[:base].join('<br/>') %></div>
+        <div class='clear'> </div>
         <div id='agree_to_terms'>
           By clicking on "Create your Company" below, you are agreeing to the Terms of Service and the Privacy Policy.
         </div>
-        <div class="actions span-4"><%= f.submit 'Create your Company' , :class => 'gh-button' %></div>
+        <div class="actions span-4"><%= f.submit 'Create your Company' , :class => 'gh-button green company-submit-button' %></div>
       <% end %>
       <div class='clear'> </div>
     </div>
@@ -65,8 +101,24 @@
           Get your startup in front of Investors
         </li>
       </ul>
+      <%= link_to accounts_path, :class => "signup-button" do %>
+        <strong>Plans and Pricing</strong>
+        Take a look at another Plan
+      <% end %>
     </div>
     <div class='clear'> </div>
   </div>
   <div class='clear'> </div>
 </div>
+
+
+<% content_for :head do -%>
+  <%= stylesheet_link_tag 'chosen.css' %>
+<% end %>
+
+<% content_for :below_body do -%>
+  <%= javascript_include_tag 'chosen/chosen.jquery.min.js' %>
+  <%= javascript_include_tag 'validators.js' %>
+  <%= javascript_include_tag 'registration/company.js' %>
+
+<% end %>

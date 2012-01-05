@@ -25,6 +25,9 @@ end
 CIM_LOGIN_ID = HADEAN_CONFIG['authnet']['login']
 CIM_TRANSACTION_KEY = HADEAN_CONFIG['authnet']['password']
 
+STRIPE_PUBLIC_KEY   = HADEAN_CONFIG['stripe']['publishable_key']
+Stripe.api_key      = HADEAN_CONFIG['stripe']['secret_key']
+
 require File.expand_path('../../lib/printing/invoice_printer', __FILE__)
 
 Paperclip.options[:command_path] = "/usr/local/bin"

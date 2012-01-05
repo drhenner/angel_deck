@@ -1,30 +1,25 @@
 class Customer::RegistrationsController < ApplicationController
-  helper_method :account
+  before_filter :require_user
+  helper_method :account, :cities
 
   def new
     @registration = true
     @user         = User.new
     @user_session = UserSession.new
     @company = Company.new(:account => account)
-    #debugger
+    @credit_card ||= ActiveMerchant::Billing::CreditCard.new()
     #render :template => "customer/registrations/new"
   end
 
   def create
-    @user = User.new(params[:user])
-    @user.format_birth_date(params[:user][:birth_date]) if params[:user][:birth_date].present?
-    # Saving without session maintenance to skip
-    # auto-login which can't happen here because
-    # the User has not yet been activated
-    if @user.save_without_session_maintenance
-      @user.deliver_activation_instructions!
-      UserSession.new(@user.attributes)
-      flash[:notice] = "Your account has been created. Please check your e-mail for your account activation instructions!"
-      redirect_to root_url
+    @company = Company.new(params[:company])
+    @company.account_id ||= Account::FREE_ID
+    if @company.create_with_payment(current_user, title = 'Owner' )
+      redirect_to my_deck_company_url(@company), :notice => "Successfully created company."
     else
-      @registration = true
-      @user_session = UserSession.new
-      render :template => 'user_sessions/new'
+      #@account = @company.account
+      @credit_card ||= ActiveMerchant::Billing::CreditCard.new()
+      render :new
     end
   end
 
@@ -48,26 +43,10 @@ class Customer::RegistrationsController < ApplicationController
       end
     end
 
-    def newd
-      account_id = account_type ? account_type[:id] : Account::FREE_ID
-      @account = Account.find(account_id)
-      @company = Company.new(:account => @account)
-      form_info
+    def cities
+      @cities ||= City.includes(:state).all.map{|c| [c.name_state_abbreviation, c.id]}
     end
-
-    def created
-      @company = Company.new(params[:company])
-      @company.account_id ||= Account::FREE_ID
-      if @company.save
-        redirect_to root_url, :notice => "Successfully created company."
-      else
-        form_info
-        @account = @company.account
-        render :new
-      end
-    end
-
       def account
-        @account ||= Account.find(Account::TYPES[self.account_type][:id])
+        @account ||= @company.try(:account) || Account.find(Account::TYPES[self.account_type][:id])
       end
 end

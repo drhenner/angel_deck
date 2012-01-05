@@ -35,7 +35,10 @@ class ApplicationController < ActionController::Base
   private
 
   def require_user
-    redirect_to login_url and store_return_location and return if logged_out?
+    if logged_out?
+      flash[:notify] = 'You are required to login or Signup.'
+      redirect_to login_url and store_return_location and return
+    end
   end
 
   def store_return_location

@@ -19,6 +19,7 @@
   <div class='widget-content' style='width:100%;'>
     <div class='selection'>
       <%= form_for @company, :url => [:registrations, @company] do |f| %>
+        <%#= f.hidden_field :stripe_card_token %>
         <ul class='span-12 column'>
           <li class="field">
             <%= f.label :name %>

@@ -55,7 +55,8 @@
 (
   $unfocused_border_color: #bbbbbb,
   $focus_border_color: #666666,
-  $fieldset_border_color: #cccccc
+  $fieldset_border_color: #cccccc,
+  $error_border_color: #FF9999
 ) {
   fieldset {
     border: 1px solid $fieldset_border_color; }
@@ -64,6 +65,9 @@
     border: 1px solid $unfocused_border_color;
     &:focus {
       border: 1px solid $focus_border_color;
+    }
+    &.error {
+      border: 1px solid $error_border_color;
     }
   }
 }
