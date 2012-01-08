@@ -1,33 +1,40 @@
-<h2> <%= @company.name %> </h2>
-
-<div class='span-12 ar-widget' style='width:455px;'>
-  <h4>Company Details</h4>
-  <ul>
-    <li><label>Closest City:</label> <%= @company.city.name %></li>
-    <li><label>About:</label> <%= @company.brief_description %></li>
-  </ul>
-
-  <% if @company.pages.size == 0 %>
-    <div>
-      You current do not have a homepage set up.
+<div id='my_deck_company'>
+  <div  style='width:100%;'>
+    <div class='span-10 column company_header' >
+      <h2 style='display:inline-block;'>
+        <%= link_to_if(@employee.can_modify_pages?, '#') do %>
+          <%= image_tag 'angel-help.jpg', :title => 'Add your Logo', :alt => 'Company Logo', :width => "70" %>
+        <% end %>
+        <%= @company.name %> (<%= @company.unique_identifier %>)
+      </h2>
+      <%= link_to "Edit", edit_my_deck_company_path(@company), :class => 'small' %>
     </div>
-  <% end %>
-  <%#= raw @company.main_page_description %>
-  <%= link_to "Change Company", edit_my_deck_company_path(@company), :class => 'button' %>
-</div>
-<div class='span-6 ar-widget' style='width:220px;'>
-  <h4>Your Access:</h4>
-  <ul>
-    <% @employee.privileges.each do |priv| %>
-      <li> <%= priv.name %> </li>
+    <% if @company.pages.size == 0 %>
+      <div class='span-10 column'>
+        Homepage is not set up.
+        <%= link_to_if @employee.can_modify_pages?, "Add a company page", new_company_admin_company_page_path(@company), :class => 'button' %>
+      </div>
     <% end %>
-  </ul>
-</div>
-<div class='span-6 last ar-widget' style='width:225px;'>
-  <h4>Employee List:</h4>
-  <ul>
-    <% @company.employees.each do |employee| %>
-      <li> <%= employee.user.name %> </li>
-    <% end %>
-  </ul>
+  </div>
+  <div class='clear'> </div>
+  <div  style='width:100%;border-top:1px solid #EEE;border-bottom:1px solid #EEE;'>
+    <%= render :partial => 'company_details' %>
+    <div class='clear'> </div>
+  </div>
+  <div class='span-6 ar-widget' style='width:220px;'>
+    <h4>Your Access:</h4>
+    <ul>
+      <% @employee.privileges.each do |priv| %>
+        <li> <%= priv.name %> </li>
+      <% end %>
+    </ul>
+  </div>
+  <div class='span-6 last ar-widget' style='width:225px;'>
+    <h4>Employee List:</h4>
+    <ul>
+      <% @company.employees.each do |employee| %>
+        <li> <%= employee.user.name %> </li>
+      <% end %>
+    </ul>
+  </div>
 </div>

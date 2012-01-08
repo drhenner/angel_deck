@@ -1,0 +1,16 @@
+#my_deck_company {
+  .company_header {
+    text-align:left;
+  }
+  h2 {
+    text-align:left;
+  }
+  #company_specific_details {
+    padding-top:5px;
+    padding-bottom:5px;
+    label {
+      display:inline-block;
+      width:120px;
+    }
+  }
+}

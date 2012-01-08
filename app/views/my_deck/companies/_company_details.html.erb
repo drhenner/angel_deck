@@ -1,0 +1,20 @@
+<div id='company_specific_details' class='span-12 ' style='width:455px;'>
+  <ul>
+    <li><label>Contact Email:</label> <%= @company.maintainer.email %></li>
+    <li><label>Closest City:</label> <%= @company.city.name %>, <%= @company.city.state_name %></li>
+    <li><label>Website:</label> <%= @company.website %></li>
+    <li><label>Joined on:</label> <%= l @company.created_at, :format => :us_date %></li>
+    <li>
+      <label>About:</label>
+      <% if @company.brief_description %>
+        <%= @company.brief_description %>
+      <% elsif @employee.can_modify_pages? %>
+        <%= link_to 'Add a Description', edit_my_deck_company_path(@company), :class => '' %>
+      <% end %>
+    </li>
+  </ul>
+
+
+  <%#= raw @company.main_page_description %>
+  <%#= link_to "Edit Company", edit_my_deck_company_path(@company), :class => 'button' %>
+</div>

@@ -10,4 +10,8 @@ class City < ActiveRecord::Base
   def name_state_abbreviation
     [name, state.abbreviation].join(' - ')
   end
+
+  def state_name
+    state.name
+  end
 end

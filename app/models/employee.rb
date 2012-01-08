@@ -12,6 +12,11 @@ class Employee < ActiveRecord::Base
   def can_remove_employees?
     admin?
   end
+  
+  
+  def can_modify_pages?
+    admin?
+  end
 
   def admin?
     privileges.map(&:name).include?('admin')

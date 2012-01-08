@@ -1631,6 +1631,25 @@ a.gh-button.classy span {
   color: #ee2222;
 }
 
+/* line 2, ../../app/stylesheets/_my_deck_company.scss */
+#my_deck_company .company_header {
+  text-align: left;
+}
+/* line 5, ../../app/stylesheets/_my_deck_company.scss */
+#my_deck_company h2 {
+  text-align: left;
+}
+/* line 8, ../../app/stylesheets/_my_deck_company.scss */
+#my_deck_company #company_specific_details {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+/* line 11, ../../app/stylesheets/_my_deck_company.scss */
+#my_deck_company #company_specific_details label {
+  display: inline-block;
+  width: 120px;
+}
+
 /* line 1, ../../app/stylesheets/_main_product_tabs.scss */
 #main-product-type-tabs, #main-myaccount-tabs {
   font-variant: small-caps;
